@@ -1,0 +1,13 @@
+//ჰედერსი არსებული ნავიგაციის ელემენტების ფონის ცვლილება
+
+const currentPage = window.location.pathname.split("/").pop();
+
+// Select all navigation links
+const navLinks = document.querySelectorAll(".header_nav_a");
+
+navLinks.forEach((link) => {
+  const linkPage = link.getAttribute("href");
+  if (linkPage === currentPage) {
+    link.classList.add("active");
+  }
+});

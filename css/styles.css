@@ -1,50 +1,173 @@
-.carousel-container {
-  position: relative;
+/* font import */
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Manrope:wght@200..800&family=Space+Grotesk:wght@300..700&display=swap");
+
+/* font-family: "Manrope", sans-serif; */
+
+/*-------------home page styles---------------*/
+/* content styles */
+.container {
+  width: 100%;
+  margin: auto;
+}
+body {
+  background-color: #1e1e1e;
+}
+
+/* header styles */
+header {
+  height: 120px;
   display: flex;
+  justify-content: space-between;
   align-items: center;
-  overflow: hidden;
-  background-color: #111;
-  padding: 20px;
+  padding: 0 162px;
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1000;
+  max-width: inherit;
+  width: inherit;
 }
 
-.carousel {
-  display: flex;
-  overflow-x: auto;
-  scroll-behavior: smooth;
-  gap: 20px;
-  scrollbar-width: none; /* Firefox */
-}
-
-.carousel::-webkit-scrollbar {
-  display: none; /* Chrome, Safari */
-}
-
-.genre {
-  min-width: 200px;
-  height: 300px;
-  background-color: #222;
-  color: white;
-  font-size: 18px;
+.nav_div {
+  background-color: #0f0f0f;
+  border-radius: 12px;
+  border: #1f1f1f 4px solid;
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 12px;
+  padding: 24px 35px;
 }
 
-.scroll-btn {
-  background-color: #333;
-  color: white;
-  border: none;
-  padding: 10px;
-  font-size: 24px;
+/* navigation styles */
+.header_nav_ul {
+  display: flex;
+  column-gap: 30px;
+}
+.header_nav_a {
+  color: var(--Grey-75, #bfbfbf);
+  font-family: "Manrope", sans-serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+}
+
+.header_nav_a.active {
+  padding: 14px 24px;
+  border-radius: 8px;
+  border: 1px solid var(--Black-10, #1a1a1a);
+  background: var(--Black-10, #1a1a1a);
+  color: #ffffff;
+}
+
+.zari_div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+}
+
+.burger_button {
+  width: 48px;
+  height: 48px;
+  border-radius: 6px;
+  border: #262626 3px solid;
+  background-color: #1a1a1a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   cursor: pointer;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+  display: none;
+}
+
+/* 1 სექციის სტილები */
+.main_sec {
+  margin-top: -20px;
+  height: 1092px;
+  background-image: url("../images/sec1_cov.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  z-index: 0;
+  /* background-color: #1e1e1e; */
+}
+
+.main_sec_div1 {
+  position: relative;
   z-index: 1;
+  min-height: 581px;
+  width: inherit;
+  background: linear-gradient(180deg, #141414 0%, rgba(20, 20, 20, 0) 100%);
 }
 
-.left {
-  margin-right: 10px;
+.main_sec_div2 {
+  position: relative;
+  z-index: 1;
+  min-height: 581px;
+  width: inherit;
+  background: linear-gradient(180deg, rgba(20, 20, 20, 0) 0%, #141414 100%);
 }
 
-.right {
-  margin-left: 10px;
+.main_sec img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 100%;
+  height: auto;
+}
+
+.text_div {
+  width: 100%;
+  height: 296px;
+  position: absolute;
+   z-index: 5;
+  /* background-color: aliceblue; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 50px;
+  justify-content: center;
+  top: 99%;
+}
+
+.text_div_child {
+  max-width: 1096px;
+}
+.text_div_child h1 {
+  font-family: "Manrope", sans-serif;
+  color: var(--Absolute-White, #fff);
+  text-align: center;
+  font-size: 58px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 150%;
+  margin-bottom: 14px;
+}
+.text_div_child p {
+  font-family: "Manrope", sans-serif;
+  color: var(--Grey-60, #999);
+  text-align: center;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+}
+
+.text_div button {
+  display: flex;
+  padding: 18px 24px;
+  align-items: center;
+  gap: 4px;
+  border-radius: 8px;
+  background: var(--Red-45, #e50000);
+  color: #fff;
+  font-family: "Manrope", sans-serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 150%; /* 27px */
 }
