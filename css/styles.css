@@ -177,10 +177,10 @@ header {
   max-width: 1597px;
   min-height: 296px;
   margin: 432px auto 0;
-  /* display: flex;
+  display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 80px; */
+  gap: 80px;
   background-color: #e50000;
 }
 
@@ -190,7 +190,6 @@ header {
   margin: 0 auto;
   align-items: center;
   margin-bottom: 80px;
-
 }
 
 .sec2_headers h2 {
@@ -220,4 +219,98 @@ header {
   padding: 16px;
   align-items: center;
   gap: 16px;
+}
+
+/* ================= */
+
+.carousel-wrapper {
+  display: flex;
+  overflow: hidden;
+}
+
+.carousel-track {
+  display: flex;
+  transition: transform 0.4s ease;
+  gap: 30px;
+}
+
+.category {
+  height: auto;
+  width: 295.4px;
+  min-height: 342px;
+  display: flex;
+  padding: 30px;
+  flex-direction: column;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  border-radius: 12px;
+  border: 1px solid var(--Black-15, #262626);
+  background: var(--Black-10, #1a1a1a);
+}
+
+.category:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 15px rgba(255, 0, 0, 0.2);
+}
+
+.category_img {
+  max-width: 30px;
+  height: 30px;
+}
+
+
+.category_headers {
+  width: 235px;
+  margin-top: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.category h4 {
+  color: var(--Absolute-White, #fff);
+  font-family: "Manrope", sans-serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 150%; /* 27px */
+}
+
+.nav-buttons {
+  position: absolute;
+  top: -10px;
+  right: 0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.nav-btn {
+  background-color: #1A1A1A;
+  border: none;
+  color: white;
+  font-size: 18px;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  border-radius: 10px;
+}
+
+.indicator-container {
+  display: flex;
+  gap: 6px;
+  height: 6px;
+}
+
+.indicator-segment {
+  width: 16px;
+  height: 6px;
+  border-radius: 10px;
+  background-color: #333333;
+}
+
+.indicator-segment.active {
+  background-color: red;
+  width: 24px; /* <-- აქტიურის სიგრძე */
 }
