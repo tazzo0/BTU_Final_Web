@@ -186,7 +186,6 @@ header {
   line-height: 150%;
   cursor: pointer;
   border: none;
- 
 }
 
 /* 2 სექციის სტილები */
@@ -339,7 +338,6 @@ header {
   line-height: 150%;
   cursor: pointer;
   border: none;
-
 }
 
 .faq-wrapper {
@@ -426,4 +424,81 @@ header {
 
 .faq-item.active .toggle-btn {
   content: "-";
+}
+
+/* სექცია 4 სტილები */
+
+.sec4 {
+  width: min(100%, 1597px);
+  min-height: 313px;
+  margin: 150px auto;
+  background-image: url("../images/sec4_bac.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  z-index: 0;
+  border-radius: 12px;
+}
+
+.sec4_div {
+  position: absolute;
+  z-index: 1;
+  min-height: 313px;
+  width: inherit;
+  background: linear-gradient(
+    90deg,
+    #0f0f0f 2.42%,
+    rgba(20, 15, 15, 0.97) 25.46%,
+    rgba(34, 14, 14, 0.91) 46.72%,
+    rgba(229, 0, 0, 0) 168.98%
+  );
+  display: flex;
+  justify-content: center;
+  padding-inline: 80px;
+  align-items: center;
+  border-radius: 12px;
+}
+
+.sec4_headers_button {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+.sec4_header h2 {
+  font-family: "Manrope", sans-serif;
+  color: var(--Absolute-White, #fff);
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 150%; /* 57px */
+  margin-bottom: 14px;
+}
+
+.sec4_header p {
+  font-family: "Manrope", sans-serif;
+  color: var(--Grey-60, #999);
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%; /* 27px */
+}
+
+.sec4_headers_button button {
+  display: flex;
+  padding: 18px 24px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 8px;
+  background: var(--Red-45, #e50000);
+  color: #fff;
+  font-family: "Manrope", sans-serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 150%;
+  cursor: pointer;
+  border: none;
 }
