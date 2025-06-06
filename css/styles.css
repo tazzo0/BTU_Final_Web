@@ -20,7 +20,7 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 0 162px;
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 50%;
   transform: translateX(-50%);
@@ -124,7 +124,7 @@ header {
   width: 100%;
   height: 296px;
   position: absolute;
-   z-index: 5;
+  z-index: 5;
   /* background-color: aliceblue; */
   display: flex;
   flex-direction: column;
@@ -169,5 +169,55 @@ header {
   font-size: 18px;
   font-style: normal;
   font-weight: 600;
+  line-height: 150%;
+}
+
+/* 2 სექციის სტილები */
+.sec2 {
+  max-width: 1597px;
+  min-height: 296px;
+  margin: 432px auto 0;
+  /* display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 80px; */
+  background-color: #e50000;
+}
+
+.sec2_headers_buttons {
+  display: flex;
+  column-gap: 200px;
+  margin: 0 auto;
+  align-items: center;
+  margin-bottom: 80px;
+
+}
+
+.sec2_headers h2 {
+  font-family: "Manrope", sans-serif;
+  color: var(--Absolute-White, #fff);
+  font-size: 38px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 150%; /* 57px */
+  margin-bottom: 14px;
+}
+
+.sec2_headers p {
+  font-family: "Manrope", sans-serif;
+  color: var(--Grey-60, #999);
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
   line-height: 150%; /* 27px */
+}
+
+.sec2_buttons {
+  border-radius: 12px;
+  border: 1px solid var(--Black-12, #1f1f1f);
+  background: var(--Black-06, #0f0f0f);
+  display: flex;
+  padding: 16px;
+  align-items: center;
+  gap: 16px;
 }
