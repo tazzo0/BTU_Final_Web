@@ -289,6 +289,7 @@ header {
 /* 3სექციის სტილები */
 .sec3 {
   width: min(100%, 1597px);
+  height: auto;
   margin: 0 auto;
   /* background-color: yellow; */
 }
@@ -626,4 +627,147 @@ footer {
   width: 1px;
   height: 27px;
   background-color: #262626;
+}
+
+/* Movies & Shows სტილები */
+
+.slider {
+  width: min(100%, 1597px);
+  min-height: 835px;
+  margin: 170px auto 180px;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+  border: 1px solid #262626;
+}
+
+.overlay-gradient {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 60%;
+  background: linear-gradient(to bottom, transparent, black);
+}
+
+.slide-content-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: calc(100% - 120px);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 30px;
+}
+
+.slide-content {
+  text-align: center;
+  opacity: 1;
+  transition: opacity 0.7s ease-in-out;
+}
+
+.slide-content h2 {
+  color: var(--Absolute-White, #fff);
+  text-align: center;
+  font-family: "Manrope", sans-serif;
+  font-size: 38px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 150%;
+}
+
+.slide-content p {
+  color: var(--Grey-60, #999);
+  text-align: center;
+  font-family: "Manrope", sans-serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 150%;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.play_media {
+  display: flex;
+  padding: 14px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  border: 1px solid var(--Black-15, #262626);
+  background: var(--Black-06, #0f0f0f);
+  gap: 10px;
+  cursor: pointer;
+}
+
+.play {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 18px 24px;
+  gap: 4px;
+  border: none;
+  border-radius: 8px;
+  background: var(--Red-45, #e50000);
+  color: var(--Absolute-White, #fff);
+  font-family: "Manrope", sans-serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 153%;
+  cursor: pointer;
+}
+.slide-content.fade-out {
+  opacity: 0;
+}
+
+.bottom-controls {
+  position: absolute;
+  bottom: 20px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 50px;
+  z-index: 2;
+}
+
+.arrow {
+  width: 56px;
+  height: 56px;
+  display: flex;
+  padding: 14px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  border: 1px solid var(--Black-12, #1f1f1f);
+  background: var(--Black-06, #0f0f0f);
+  gap: 10px;
+  cursor: pointer;
+}
+
+.progress-bar {
+  display: flex;
+  gap: 6px;
+}
+.dot {
+  height: 6px;
+  width: 10px;
+  background: var(--Black-12, #1f1f1f);
+  border-radius: 4px;
+  transition: all 0.7s ease;
+}
+.dot.active {
+  background: red;
+  width: 20px;
 }
