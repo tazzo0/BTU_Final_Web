@@ -47,28 +47,6 @@
       </header>
 
       <!-- 1 სექცია -->
-      <!-- <section class="sec21">
-        <div class="slider" id="slider">
-          <div class="slider-content">
-            <h1 id="slideTitle"></h1>
-            <p id="slideDescription"></p>
-            <div class="buttons">
-              <button class="play-btn">▶ Play Now</button>
-              <button class="icon-btn">+</button>
-              <button class="icon-btn">👍</button>
-              <button class="icon-btn">🔊</button>
-            </div>
-          </div>
-          <div class="bottom-controls">
-            <button class="arrow" onclick="prevSlide()">←</button>
-            <div class="progress-container">
-              <div class="progress-indicator" id="progressIndicator"></div>
-            </div>
-            <button class="arrow" onclick="nextSlide()">→</button>
-          </div>
-        </div>
-      </section> -->
-
       <section class="slider">
         <div class="overlay-gradient"></div>
 
@@ -100,6 +78,219 @@
             <img src="./images/right_arrow.svg" alt="arrow" />
           </button>
         </div>
+      </section>
+
+      <!-- 2 სექცია -->
+      <section class="sec22">
+        <div class="section-label">Movies</div>
+        <div class="genre-slider-section">
+          <div class="genre-slider-header">
+            <h2>Our Genres</h2>
+            <div class="genre-slider-nav-box">
+              <button
+                class="genre-slider-arrow-btn"
+                onclick="genreSliderPrev()"
+              >
+                <img src="./images/left_arrow.svg" alt="arrow" />
+              </button>
+              <div class="genre-slider-dots" id="genre-slider-dots"></div>
+              <button
+                class="genre-slider-arrow-btn"
+                onclick="genreSliderNext()"
+              >
+                <img src="./images/right_arrow.svg" alt="arrow" />
+              </button>
+            </div>
+          </div>
+          <div class="genre-slider-container">
+            <div class="genre-slider-track" id="genre-slider-track">
+              <div class="genre-slider-card">
+                <img src="./images/action.png" />
+                <div class="genre-slider-title">Action</div>
+              </div>
+              <div class="genre-slider-card">
+                <img src="./images/adventure.png" />
+                <div class="genre-slider-title">Adventure</div>
+              </div>
+              <div class="genre-slider-card">
+                <img src="./images/comedy.png" />
+                <div class="genre-slider-title">Comedy</div>
+              </div>
+              <div class="genre-slider-card">
+                <img src="./images/Drama.png" />
+                <div class="genre-slider-title">Drama</div>
+              </div>
+              <div class="genre-slider-card">
+                <img src="./images/horror.png" />
+                <div class="genre-slider-title">Horror</div>
+              </div>
+              <div class="genre-slider-card">
+                <img src="./images/action.png" />
+                <div class="genre-slider-title">Action</div>
+              </div>
+              <div class="genre-slider-card">
+                <img src="./images/adventure.png" />
+                <div class="genre-slider-title">Adventure</div>
+              </div>
+              <div class="genre-slider-card">
+                <img src="./images/comedy.png" />
+                <div class="genre-slider-title">Comedy</div>
+              </div>
+              <div class="genre-slider-card">
+                <img src="./images/Drama.png" />
+                <div class="genre-slider-title">Drama</div>
+              </div>
+              <div class="genre-slider-card">
+                <img src="./images/horror.png" />
+                <div class="genre-slider-title">Horror</div>
+              </div>
+              <div class="genre-slider-card">
+                <img src="./images/action.png" />
+                <div class="genre-slider-title">Action</div>
+              </div>
+              <div class="genre-slider-card">
+                <img src="./images/adventure.png" />
+                <div class="genre-slider-title">Adventure</div>
+              </div>
+              <div class="genre-slider-card">
+                <img src="./images/comedy.png" />
+                <div class="genre-slider-title">Comedy</div>
+              </div>
+              <div class="genre-slider-card">
+                <img src="./images/Drama.png" />
+                <div class="genre-slider-title">Drama</div>
+              </div>
+              <div class="genre-slider-card">
+                <img src="./images/horror.png" />
+                <div class="genre-slider-title">Horror</div>
+              </div>
+              <div class="genre-slider-card">
+                <img src="./images/action.png" />
+                <div class="genre-slider-title">Action</div>
+              </div>
+              <div class="genre-slider-card">
+                <img src="./images/adventure.png" />
+                <div class="genre-slider-title">Adventure</div>
+              </div>
+              <div class="genre-slider-card">
+                <img src="./images/comedy.png" />
+                <div class="genre-slider-title">Comedy</div>
+              </div>
+              <div class="genre-slider-card">
+                <img src="./images/Drama.png" />
+                <div class="genre-slider-title">Drama</div>
+              </div>
+              <div class="genre-slider-card">
+                <img src="./images/horror.png" />
+                <div class="genre-slider-title">Horror</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- <div class="genre-slider-section">
+          <div class="genre-slider-header">
+            <h2>Popular Top 10 In Genres</h2>
+            <div class="genre-slider-nav-box">
+              <button
+                class="genre-slider-arrow-btn"
+                onclick="genreSliderPrev()"
+              >
+                <img src="./images/left_arrow.svg" alt="arrow" />
+              </button>
+              <div class="genre-slider-dots" id="genre-slider-dots"></div>
+              <button
+                class="genre-slider-arrow-btn"
+                onclick="genreSliderNext()"
+              >
+                <img src="./images/right_arrow.svg" alt="arrow" />
+              </button>
+            </div>
+          </div>
+          <div class="genre-slider-container">
+            <div class="genre-slider-track" id="genre-slider-track">
+              <div class="genre-slider-card">
+                <img src="./images/action.png" />
+                <div class="genre-slider-title">Action</div>
+              </div>
+              <div class="genre-slider-card">
+                <img src="./images/adventure.png" />
+                <div class="genre-slider-title">Adventure</div>
+              </div>
+              <div class="genre-slider-card">
+                <img src="./images/comedy.png" />
+                <div class="genre-slider-title">Comedy</div>
+              </div>
+              <div class="genre-slider-card">
+                <img src="./images/Drama.png" />
+                <div class="genre-slider-title">Drama</div>
+              </div>
+              <div class="genre-slider-card">
+                <img src="./images/horror.png" />
+                <div class="genre-slider-title">Horror</div>
+              </div>
+              <div class="genre-slider-card">
+                <img src="./images/action.png" />
+                <div class="genre-slider-title">Action</div>
+              </div>
+              <div class="genre-slider-card">
+                <img src="./images/adventure.png" />
+                <div class="genre-slider-title">Adventure</div>
+              </div>
+              <div class="genre-slider-card">
+                <img src="./images/comedy.png" />
+                <div class="genre-slider-title">Comedy</div>
+              </div>
+              <div class="genre-slider-card">
+                <img src="./images/Drama.png" />
+                <div class="genre-slider-title">Drama</div>
+              </div>
+              <div class="genre-slider-card">
+                <img src="./images/horror.png" />
+                <div class="genre-slider-title">Horror</div>
+              </div>
+              <div class="genre-slider-card">
+                <img src="./images/action.png" />
+                <div class="genre-slider-title">Action</div>
+              </div>
+              <div class="genre-slider-card">
+                <img src="./images/adventure.png" />
+                <div class="genre-slider-title">Adventure</div>
+              </div>
+              <div class="genre-slider-card">
+                <img src="./images/comedy.png" />
+                <div class="genre-slider-title">Comedy</div>
+              </div>
+              <div class="genre-slider-card">
+                <img src="./images/Drama.png" />
+                <div class="genre-slider-title">Drama</div>
+              </div>
+              <div class="genre-slider-card">
+                <img src="./images/horror.png" />
+                <div class="genre-slider-title">Horror</div>
+              </div>
+              <div class="genre-slider-card">
+                <img src="./images/action.png" />
+                <div class="genre-slider-title">Action</div>
+              </div>
+              <div class="genre-slider-card">
+                <img src="./images/adventure.png" />
+                <div class="genre-slider-title">Adventure</div>
+              </div>
+              <div class="genre-slider-card">
+                <img src="./images/comedy.png" />
+                <div class="genre-slider-title">Comedy</div>
+              </div>
+              <div class="genre-slider-card">
+                <img src="./images/Drama.png" />
+                <div class="genre-slider-title">Drama</div>
+              </div>
+              <div class="genre-slider-card">
+                <img src="./images/horror.png" />
+                <div class="genre-slider-title">Horror</div>
+              </div>
+            </div>
+          </div>
+        </div> -->
       </section>
 
       <!-- 4 სექცია -->

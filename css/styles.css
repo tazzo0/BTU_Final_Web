@@ -771,3 +771,139 @@ footer {
   background: red;
   width: 20px;
 }
+
+/* სექცია 2 სტილები */
+
+.sec22 {
+  position: relative;
+  width: min(100%, 1597px);
+  margin: 0 auto;
+  display: flex;
+  padding: 50px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 100px;
+  border-radius: 12px;
+  border: 1px solid var(--Black-15, #262626);
+}
+
+.section-label {
+  position: absolute;
+  top: -25px;
+  left: 20px;
+  display: flex;
+  padding: 10px 24px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  background: var(--Red-45, #e50000);
+  color: var(--Absolute-White, #fff);
+  text-align: center;
+  font-family: "Manrope", sans-serif;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 150%; /* 30px */
+}
+.genre-slider-section {
+  width: min(100%, 1498px);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+
+  gap: 50px;
+}
+
+.genre-slider-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.genre-slider-header h2 {
+  font-family: "Manrope", sans-serif;
+  color: var(--Absolute-White, #fff);
+  font-size: 38px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 150%; /* 57px */
+}
+
+.genre-slider-nav-box {
+  display: flex;
+  padding: 16px;
+  align-items: center;
+  gap: 16px;
+  border-radius: 12px;
+  border: 1px solid var(--Black-12, #1f1f1f);
+  background-color: var(--Black-06, #0f0f0f);
+}
+.genre-slider-arrow-btn {
+  display: flex;
+  padding: 14px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  border: 1px solid var(--Black-12, #1f1f1f);
+  background: var(--Black-10, #1a1a1a);
+  cursor: pointer;
+}
+.genre-slider-container {
+  display: flex;
+  overflow: hidden;
+  position: relative;
+}
+
+.genre-slider-track {
+  display: flex;
+  gap: 30px;
+  transition: transform 1s cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+.genre-slider-card {
+  width: 275.6px;
+  height: 342px;
+  display: flex;
+  padding: 30px;
+  flex-direction: column;
+  align-items: flex-start;
+  flex: 1 0 0;
+  border-radius: 12px;
+  border: 1px solid var(--Black-15, #262626);
+  background: var(--Black-10, #1a1a1a);
+}
+
+.genre-slider-card img {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.genre-slider-title {
+  color: var(--Absolute-White, #fff);
+  font-family: "Manrope", sans-serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 150%;
+}
+
+.genre-slider-dots {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  justify-content: center;
+}
+
+.genre-slider-dot {
+  width: 15px;
+  height: 4px;
+  background: #555;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+.genre-slider-dot.active {
+  background: red;
+  width: 23px;
+}

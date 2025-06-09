@@ -60,7 +60,7 @@ const slides = [
 let current = 0;
 let autoSlideInterval;
 
-const slider = document.querySelector(".slider");
+const slider1 = document.querySelector(".slider");
 const titleEl = document.getElementById("slide-title");
 const descEl = document.getElementById("slide-description");
 const progressBar = document.getElementById("progress-bar");
@@ -71,7 +71,7 @@ function updateSlide() {
 
   setTimeout(() => {
     const slide = slides[current];
-    slider.style.backgroundImage = `url(${slide.image})`;
+    slider1.style.backgroundImage = `url(${slide.image})`;
     titleEl.textContent = slide.title;
     descEl.textContent = slide.description;
 
@@ -123,4 +123,124 @@ function resetAutoSlide() {
 document.addEventListener("DOMContentLoaded", () => {
   updateSlide();
   startAutoSlide();
+});
+
+// movies  & shows სექცია 2
+
+const slider = document.getElementById("genre-slider-track");
+const dotsContainer = document.getElementById("genre-slider-dots");
+const totalCards = slider.children.length;
+const cardsPerSlide = 5;
+const totalSlides = Math.ceil(totalCards / cardsPerSlide);
+let currentSlide = 0;
+let isTransitioning = false;
+
+function renderGenreSliderDots() {
+  dotsContainer.innerHTML = "";
+  for (let i = 0; i < totalSlides; i++) {
+    const dot = document.createElement("div");
+    dot.classList.add("genre-slider-dot");
+    if (i === currentSlide) dot.classList.add("active");
+    dotsContainer.appendChild(dot);
+  }
+}
+
+function updateGenreSlider() {
+  const cardWidth =
+    document.querySelector(".genre-slider-card").offsetWidth + 30; // 30px margin
+  const moveX = currentSlide * cardWidth * cardsPerSlide;
+  slider.style.transition = "transform 1s cubic-bezier(0.77, 0, 0.175, 1)";
+  slider.style.transform = `translateX(-${moveX}px)`;
+  renderGenreSliderDots();
+}
+
+function genreSliderNext() {
+  if (isTransitioning) return;
+  currentSlide++;
+  if (currentSlide >= totalSlides) {
+    currentSlide = 0;
+  }
+  isTransitioning = true;
+  updateGenreSlider();
+  setTimeout(() => {
+    isTransitioning = false;
+  }, 1000);
+}
+
+
+
+function genreSliderPrev() {
+  if (isTransitioning) return;
+  currentSlide--;
+  if (currentSlide < 0) {
+    currentSlide = totalSlides - 1;
+  }
+  isTransitioning = true;
+  updateGenreSlider();
+  setTimeout(() => {
+    isTransitioning = false;
+  }, 1000);
+}
+
+window.addEventListener("resize", updateGenreSlider);
+window.addEventListener("load", () => {
+  renderGenreSliderDots();
+  updateGenreSlider();
+});
+
+
+document.querySelectorAll(".genre-slider").forEach((section) => {
+  const sliderId = section.dataset.sliderId;
+  const track = section.querySelector(".genre-slider-track");
+  const dotsContainer = section.querySelector(".genre-slider-dots");
+  const cards = section.querySelectorAll(".genre-slider-card");
+  const prevBtn = section.querySelector(".genre-slider-prev");
+  const nextBtn = section.querySelector(".genre-slider-next");
+
+  const cardsPerSlide = 5;
+  const totalSlides = Math.ceil(cards.length / cardsPerSlide);
+  let currentSlide = 0;
+  let isTransitioning = false;
+
+  const renderDots = () => {
+    dotsContainer.innerHTML = "";
+    for (let i = 0; i < totalSlides; i++) {
+      const dot = document.createElement("div");
+      dot.classList.add("genre-slider-dot");
+      if (i === currentSlide) dot.classList.add("active");
+      dotsContainer.appendChild(dot);
+    }
+  };
+
+  const updateSlider = () => {
+    const cardWidth = cards[0].offsetWidth + 16;
+    const moveX = currentSlide * cardWidth * cardsPerSlide;
+    track.style.transition = "transform 1s cubic-bezier(0.77, 0, 0.175, 1)";
+    track.style.transform = `translateX(-${moveX}px)`;
+    renderDots();
+  };
+
+  const nextSlide = () => {
+    if (isTransitioning) return;
+    currentSlide = (currentSlide + 1) % totalSlides;
+    isTransitioning = true;
+    updateSlider();
+    setTimeout(() => (isTransitioning = false), 1000);
+  };
+
+  const prevSlide = () => {
+    if (isTransitioning) return;
+    currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+    isTransitioning = true;
+    updateSlider();
+    setTimeout(() => (isTransitioning = false), 1000);
+  };
+
+  nextBtn.addEventListener("click", nextSlide);
+  prevBtn.addEventListener("click", prevSlide);
+  window.addEventListener("resize", updateSlider);
+  window.addEventListener("load", updateSlider);
+
+  renderDots();
+  updateSlider();
 });
