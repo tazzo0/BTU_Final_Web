@@ -291,7 +291,6 @@ header {
   width: min(100%, 1597px);
   height: auto;
   margin: 0 auto;
-  /* background-color: yellow; */
 }
 .sec3_headers_button {
   width: 100%;
@@ -314,7 +313,7 @@ header {
   font-size: 38px;
   font-style: normal;
   font-weight: 700;
-  line-height: 150%; /* 57px */
+  line-height: 150%;
 }
 .sec3_headers p {
   font-family: "Manrope", sans-serif;
@@ -322,7 +321,7 @@ header {
   font-size: 18px;
   font-style: normal;
   font-weight: 400;
-  line-height: 150%; /* 27px */
+  line-height: 150%;
 }
 
 .sec3_headers_button button {
@@ -376,7 +375,7 @@ header {
   font-size: 22px;
   font-style: normal;
   font-weight: 500;
-  line-height: 150%; /* 33px */
+  line-height: 150%;
 }
 
 .faq-header span {
@@ -777,6 +776,7 @@ footer {
 .sec22 {
   position: relative;
   width: min(100%, 1597px);
+  height: auto;
   margin: 0 auto;
   display: flex;
   padding: 50px;
@@ -807,10 +807,10 @@ footer {
 }
 .genre-slider-section {
   width: min(100%, 1498px);
+  height: auto;
   overflow: hidden;
   display: flex;
   flex-direction: column;
-
   gap: 50px;
 }
 
@@ -825,7 +825,7 @@ footer {
   font-size: 38px;
   font-style: normal;
   font-weight: 700;
-  line-height: 150%; /* 57px */
+  line-height: 150%;
 }
 
 .genre-slider-nav-box {
@@ -879,6 +879,12 @@ footer {
   border-radius: 8px;
 }
 
+.genre-slider-card img:hover {
+  transform: scale(1.01);
+  box-shadow: 0 8px 32px rgba(229, 0, 0, 0.25);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
 .genre-slider-title {
   color: var(--Absolute-White, #fff);
   font-family: "Manrope", sans-serif;
@@ -906,4 +912,112 @@ footer {
 .genre-slider-dot.active {
   background: red;
   width: 23px;
+}
+
+/* <!-- New_Releases სექცია სტილები--> */
+
+.slider-card {
+  display: flex;
+  height: 377px;
+  padding: 20px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.new-release-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  border-radius: 51px;
+  border: 1px solid var(--Black-15, #262626);
+  background: var(--Black-08, #141414);
+  color: var(--Grey-60, #999);
+  font-family: "Manrope", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 150%;
+}
+
+/* <!-- Most watched სექცია --> */
+
+.slider-track1 {
+  display: flex;
+  gap: 20px;
+  transition: transform 1s cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+.slider-card_must {
+  width: 359.5px;
+  height: 520px;
+  display: flex;
+  padding: 20px;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  border-radius: 12px;
+  border: 1px solid var(--Black-15, #262626);
+  background: var(--Black-10, #1a1a1a);
+}
+
+.must_card_img {
+  width: 100%;
+  height: 404px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.must_card_img:hover {
+  transform: scale(1.01);
+  box-shadow: 0 8px 32px rgba(229, 0, 0, 0.25);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.must_watch_div {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.movie-length {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  padding: 6px 10px 6px 6px;
+  border-radius: 51px;
+  border: 1px solid var(--Black-15, #262626);
+  background: var(--Black-08, #141414);
+  color: var(--Grey-60, #999);
+  font-family: "Manrope", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 150%;
+}
+
+.movie-length img {
+  width: 24px;
+  height: 24px;
+}
+
+.movie-rate {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  padding: 6px 10px 6px 6px;
+  border-radius: 51px;
+  border: 1px solid var(--Black-15, #262626);
+  background: var(--Black-08, #141414);
+  color: var(--Grey-60, #999);
+  font-family: "Manrope", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 150%;
 }

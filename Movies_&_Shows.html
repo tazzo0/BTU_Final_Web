@@ -81,216 +81,420 @@
       </section>
 
       <!-- 2 სექცია -->
-      <section class="sec22">
+      <section class="sec22 slider-section">
         <div class="section-label">Movies</div>
-        <div class="genre-slider-section">
+        <div class="genre-slider-section" data-slider-id="movies">
           <div class="genre-slider-header">
             <h2>Our Genres</h2>
             <div class="genre-slider-nav-box">
               <button
-                class="genre-slider-arrow-btn"
-                onclick="genreSliderPrev()"
+                class="genre-slider-arrow-btn prev"
+                data-slider-id="movies"
               >
                 <img src="./images/left_arrow.svg" alt="arrow" />
               </button>
-              <div class="genre-slider-dots" id="genre-slider-dots"></div>
+              <div
+                class="genre-slider-dots slider-dots"
+                id="slider-dots-movies"
+              ></div>
               <button
-                class="genre-slider-arrow-btn"
-                onclick="genreSliderNext()"
+                class="genre-slider-arrow-btn next"
+                data-slider-id="movies"
               >
                 <img src="./images/right_arrow.svg" alt="arrow" />
               </button>
             </div>
           </div>
+
           <div class="genre-slider-container">
-            <div class="genre-slider-track" id="genre-slider-track">
-              <div class="genre-slider-card">
+            <div
+              class="genre-slider-track slider-track"
+              id="slider-track-movies"
+            >
+              <div class="genre-slider-card slider-card">
                 <img src="./images/action.png" />
                 <div class="genre-slider-title">Action</div>
               </div>
-              <div class="genre-slider-card">
+              <div class="genre-slider-card slider-card">
                 <img src="./images/adventure.png" />
                 <div class="genre-slider-title">Adventure</div>
               </div>
-              <div class="genre-slider-card">
+              <div class="genre-slider-card slider-card">
                 <img src="./images/comedy.png" />
                 <div class="genre-slider-title">Comedy</div>
               </div>
-              <div class="genre-slider-card">
+              <div class="genre-slider-card slider-card">
                 <img src="./images/Drama.png" />
                 <div class="genre-slider-title">Drama</div>
               </div>
-              <div class="genre-slider-card">
+              <div class="genre-slider-card slider-card">
                 <img src="./images/horror.png" />
                 <div class="genre-slider-title">Horror</div>
               </div>
-              <div class="genre-slider-card">
+              <div class="genre-slider-card slider-card">
                 <img src="./images/action.png" />
                 <div class="genre-slider-title">Action</div>
               </div>
-              <div class="genre-slider-card">
+              <div class="genre-slider-card slider-card">
                 <img src="./images/adventure.png" />
                 <div class="genre-slider-title">Adventure</div>
               </div>
-              <div class="genre-slider-card">
+              <div class="genre-slider-card slider-card">
                 <img src="./images/comedy.png" />
                 <div class="genre-slider-title">Comedy</div>
               </div>
-              <div class="genre-slider-card">
+              <div class="genre-slider-card slider-card">
                 <img src="./images/Drama.png" />
                 <div class="genre-slider-title">Drama</div>
               </div>
-              <div class="genre-slider-card">
+              <div class="genre-slider-card slider-card">
                 <img src="./images/horror.png" />
                 <div class="genre-slider-title">Horror</div>
               </div>
-              <div class="genre-slider-card">
+              <div class="genre-slider-card slider-card">
                 <img src="./images/action.png" />
                 <div class="genre-slider-title">Action</div>
               </div>
-              <div class="genre-slider-card">
+              <div class="genre-slider-card slider-card">
                 <img src="./images/adventure.png" />
                 <div class="genre-slider-title">Adventure</div>
               </div>
-              <div class="genre-slider-card">
+              <div class="genre-slider-card slider-card">
                 <img src="./images/comedy.png" />
                 <div class="genre-slider-title">Comedy</div>
               </div>
-              <div class="genre-slider-card">
+              <div class="genre-slider-card slider-card">
                 <img src="./images/Drama.png" />
                 <div class="genre-slider-title">Drama</div>
               </div>
-              <div class="genre-slider-card">
+              <div class="genre-slider-card slider-card">
                 <img src="./images/horror.png" />
                 <div class="genre-slider-title">Horror</div>
               </div>
-              <div class="genre-slider-card">
+              <div class="genre-slider-card slider-card">
                 <img src="./images/action.png" />
                 <div class="genre-slider-title">Action</div>
               </div>
-              <div class="genre-slider-card">
+              <div class="genre-slider-card slider-card">
                 <img src="./images/adventure.png" />
                 <div class="genre-slider-title">Adventure</div>
               </div>
-              <div class="genre-slider-card">
+              <div class="genre-slider-card slider-card">
                 <img src="./images/comedy.png" />
                 <div class="genre-slider-title">Comedy</div>
               </div>
-              <div class="genre-slider-card">
+              <div class="genre-slider-card slider-card">
                 <img src="./images/Drama.png" />
                 <div class="genre-slider-title">Drama</div>
               </div>
-              <div class="genre-slider-card">
+              <div class="genre-slider-card slider-card">
                 <img src="./images/horror.png" />
                 <div class="genre-slider-title">Horror</div>
               </div>
             </div>
           </div>
         </div>
-        <!-- <div class="genre-slider-section">
+        <!-- Popular Top 10 In Genres სექცია -->
+        <div class="genre-slider-section" data-slider-id="popular">
           <div class="genre-slider-header">
             <h2>Popular Top 10 In Genres</h2>
             <div class="genre-slider-nav-box">
               <button
-                class="genre-slider-arrow-btn"
-                onclick="genreSliderPrev()"
+                class="genre-slider-arrow-btn prev"
+                data-slider-id="popular"
               >
                 <img src="./images/left_arrow.svg" alt="arrow" />
               </button>
-              <div class="genre-slider-dots" id="genre-slider-dots"></div>
+              <div
+                class="genre-slider-dots slider-dots"
+                id="slider-dots-popular"
+              ></div>
               <button
-                class="genre-slider-arrow-btn"
-                onclick="genreSliderNext()"
+                class="genre-slider-arrow-btn next"
+                data-slider-id="popular"
               >
                 <img src="./images/right_arrow.svg" alt="arrow" />
               </button>
             </div>
           </div>
+
           <div class="genre-slider-container">
-            <div class="genre-slider-track" id="genre-slider-track">
-              <div class="genre-slider-card">
-                <img src="./images/action.png" />
+            <div
+              class="genre-slider-track slider-track"
+              id="slider-track-popular"
+            >
+              <div class="genre-slider-card slider-card">
+                <img src="./images/action2.png" />
                 <div class="genre-slider-title">Action</div>
               </div>
-              <div class="genre-slider-card">
-                <img src="./images/adventure.png" />
+              <div class="genre-slider-card slider-card">
+                <img src="./images/adventure2.png" />
                 <div class="genre-slider-title">Adventure</div>
               </div>
-              <div class="genre-slider-card">
-                <img src="./images/comedy.png" />
+              <div class="genre-slider-card slider-card">
+                <img src="./images/comedy2.png" />
                 <div class="genre-slider-title">Comedy</div>
               </div>
-              <div class="genre-slider-card">
-                <img src="./images/Drama.png" />
+              <div class="genre-slider-card slider-card">
+                <img src="./images/drama2.png" />
                 <div class="genre-slider-title">Drama</div>
               </div>
-              <div class="genre-slider-card">
+              <div class="genre-slider-card slider-card">
                 <img src="./images/horror.png" />
                 <div class="genre-slider-title">Horror</div>
               </div>
-              <div class="genre-slider-card">
-                <img src="./images/action.png" />
+              <div class="genre-slider-card slider-card">
+                <img src="./images/action2.png" />
                 <div class="genre-slider-title">Action</div>
               </div>
-              <div class="genre-slider-card">
-                <img src="./images/adventure.png" />
+              <div class="genre-slider-card slider-card">
+                <img src="./images/adventure2.png" />
                 <div class="genre-slider-title">Adventure</div>
               </div>
-              <div class="genre-slider-card">
-                <img src="./images/comedy.png" />
+              <div class="genre-slider-card slider-card">
+                <img src="./images/comedy2.png" />
                 <div class="genre-slider-title">Comedy</div>
               </div>
-              <div class="genre-slider-card">
-                <img src="./images/Drama.png" />
+              <div class="genre-slider-card slider-card">
+                <img src="./images/drama2.png" />
                 <div class="genre-slider-title">Drama</div>
               </div>
-              <div class="genre-slider-card">
+              <div class="genre-slider-card slider-card">
                 <img src="./images/horror.png" />
                 <div class="genre-slider-title">Horror</div>
               </div>
-              <div class="genre-slider-card">
-                <img src="./images/action.png" />
+              <div class="genre-slider-card slider-card">
+                <img src="./images/action2.png" />
                 <div class="genre-slider-title">Action</div>
               </div>
-              <div class="genre-slider-card">
-                <img src="./images/adventure.png" />
+              <div class="genre-slider-card slider-card">
+                <img src="./images/adventure2.png" />
                 <div class="genre-slider-title">Adventure</div>
               </div>
-              <div class="genre-slider-card">
-                <img src="./images/comedy.png" />
+              <div class="genre-slider-card slider-card">
+                <img src="./images/comedy2.png" />
                 <div class="genre-slider-title">Comedy</div>
               </div>
-              <div class="genre-slider-card">
-                <img src="./images/Drama.png" />
+              <div class="genre-slider-card slider-card">
+                <img src="./images/drama2.png" />
                 <div class="genre-slider-title">Drama</div>
               </div>
-              <div class="genre-slider-card">
-                <img src="./images/horror.png" />
-                <div class="genre-slider-title">Horror</div>
-              </div>
-              <div class="genre-slider-card">
-                <img src="./images/action.png" />
-                <div class="genre-slider-title">Action</div>
-              </div>
-              <div class="genre-slider-card">
-                <img src="./images/adventure.png" />
-                <div class="genre-slider-title">Adventure</div>
-              </div>
-              <div class="genre-slider-card">
-                <img src="./images/comedy.png" />
-                <div class="genre-slider-title">Comedy</div>
-              </div>
-              <div class="genre-slider-card">
-                <img src="./images/Drama.png" />
-                <div class="genre-slider-title">Drama</div>
-              </div>
-              <div class="genre-slider-card">
+              <div class="genre-slider-card slider-card">
                 <img src="./images/horror.png" />
                 <div class="genre-slider-title">Horror</div>
               </div>
             </div>
           </div>
-        </div> -->
+        </div>
+
+        <!-- New_Releases სექცია -->
+        <div class="genre-slider-section" data-slider-id="New_Releases">
+          <div class="genre-slider-header">
+            <h2>New Releases</h2>
+            <div class="genre-slider-nav-box">
+              <button
+                class="genre-slider-arrow-btn prev"
+                data-slider-id="New_Releases"
+              >
+                <img src="./images/left_arrow.svg" alt="arrow" />
+              </button>
+              <div
+                class="genre-slider-dots slider-dots"
+                id="slider-dots-New_Releases"
+              ></div>
+              <button
+                class="genre-slider-arrow-btn next"
+                data-slider-id="New_Releases"
+              >
+                <img src="./images/right_arrow.svg" alt="arrow" />
+              </button>
+            </div>
+          </div>
+
+          <div class="genre-slider-container">
+            <div
+              class="genre-slider-track slider-track"
+              id="slider-track-New_Releases"
+            >
+              <div class="genre-slider-card slider-card">
+                <img src="./images/adipurush.png" />
+                <div class="new-release-card-header">
+                  Released at 14 April 2023
+                </div>
+              </div>
+              <div class="genre-slider-card slider-card">
+                <img src="./images/run.png" />
+                <div class="new-release-card-header">
+                  Released at 22 April 2023
+                </div>
+              </div>
+              <div class="genre-slider-card slider-card">
+                <img src="./images/sin_city.png" />
+                <div class="new-release-card-header">
+                  Released at 13 April 2023
+                </div>
+              </div>
+              <div class="genre-slider-card slider-card">
+                <img src="./images/tomorrow_war.png" />
+                <div class="new-release-card-header">
+                  Released at 19 April 2023
+                </div>
+              </div>
+              <div class="genre-slider-card slider-card">
+                <img src="./images/missfire.png" />
+                <div class="new-release-card-header">
+                  Released at 11 April 2023
+                </div>
+              </div>
+              <div class="genre-slider-card slider-card">
+                <img src="./images/adipurush.png" />
+                <div class="new-release-card-header">
+                  Released at 14 April 2023
+                </div>
+              </div>
+              <div class="genre-slider-card slider-card">
+                <img src="./images/run.png" />
+                <div class="new-release-card-header">
+                  Released at 22 April 2023
+                </div>
+              </div>
+              <div class="genre-slider-card slider-card">
+                <img src="./images/sin_city.png" />
+                <div class="new-release-card-header">
+                  Released at 13 April 2023
+                </div>
+              </div>
+              <div class="genre-slider-card slider-card">
+                <img src="./images/tomorrow_war.png" />
+                <div class="new-release-card-header">
+                  Released at 19 April 2023
+                </div>
+              </div>
+              <div class="genre-slider-card slider-card">
+                <img src="./images/missfire.png" />
+                <div class="new-release-card-header">
+                  Released at 11 April 2023
+                </div>
+              </div>
+              <div class="genre-slider-card slider-card">
+                <img src="./images/adipurush.png" />
+                <div class="new-release-card-header">
+                  Released at 14 April 2023
+                </div>
+              </div>
+              <div class="genre-slider-card slider-card">
+                <img src="./images/run.png" />
+                <div class="new-release-card-header">
+                  Released at 22 April 2023
+                </div>
+              </div>
+              <div class="genre-slider-card slider-card">
+                <img src="./images/sin_city.png" />
+                <div class="new-release-card-header">
+                  Released at 13 April 2023
+                </div>
+              </div>
+              <div class="genre-slider-card slider-card">
+                <img src="./images/tomorrow_war.png" />
+                <div class="new-release-card-header">
+                  Released at 19 April 2023
+                </div>
+              </div>
+              <div class="genre-slider-card slider-card">
+                <img src="./images/missfire.png" />
+                <div class="new-release-card-header">
+                  Released at 11 April 2023
+                </div>
+              </div>
+              <div class="genre-slider-card slider-card">
+                <img src="./images/adipurush.png" />
+                <div class="new-release-card-header">
+                  Released at 14 April 2023
+                </div>
+              </div>
+              <div class="genre-slider-card slider-card">
+                <img src="./images/run.png" />
+                <div class="new-release-card-header">
+                  Released at 22 April 2023
+                </div>
+              </div>
+              <div class="genre-slider-card slider-card">
+                <img src="./images/sin_city.png" />
+                <div class="new-release-card-header">
+                  Released at 13 April 2023
+                </div>
+              </div>
+              <div class="genre-slider-card slider-card">
+                <img src="./images/tomorrow_war.png" />
+                <div class="new-release-card-header">
+                  Released at 19 April 2023
+                </div>
+              </div>
+              <div class="genre-slider-card slider-card">
+                <img src="./images/missfire.png" />
+                <div class="new-release-card-header">
+                  Released at 11 April 2023
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Must watched სექცია -->
+
+        <div class="genre-slider-section" data-slider-id="Must">
+          <div class="genre-slider-header">
+            <h2>NMust - Watch Movies</h2>
+          </div>
+          <div class="genre-slider-container">
+            <div class="slider-track slider-track1" id="slider-track-Must">
+              <div class="slider-card_must">
+                <img class="must_card_img" src="./images/kantara.png" />
+                <div class="must_watch_div">
+                  <div class="movie-length">
+                    <img src="./images/clock.svg" alt="clock" />1h 57min
+                  </div>
+                  <div class="movie-rate">
+                    <img src="./images/rate_1.png" alt="rate" /> 20K
+                  </div>
+                </div>
+              </div>
+              <div class="slider-card_must">
+                <img class="must_card_img" src="./images/pusha.png" />
+                <div class="must_watch_div">
+                  <div class="movie-length">
+                    <img src="./images/clock.svg" alt="clock" />1h 30min
+                  </div>
+                  <div class="movie-rate">
+                    <img src="./images/rate_2.png" alt="rate" /> 20K
+                  </div>
+                </div>
+              </div>
+              <div class="slider-card_must">
+                <img class="must_card_img" src="./images/blade.png" />
+                <div class="must_watch_div">
+                  <div class="movie-length">
+                    <img src="./images/clock.svg" alt="clock" />1h 42min
+                  </div>
+                  <div class="movie-rate">
+                    <img src="./images/rate_1.png" alt="rate" /> 20K
+                  </div>
+                </div>
+              </div>
+              <div class="slider-card_must">
+                <img class="must_card_img" src="./images/adipurush.png" />
+                <div class="must_watch_div">
+                  <div class="movie-length">
+                    <img src="./images/clock.svg" alt="clock" />2h 10min
+                  </div>
+                  <div class="movie-rate">
+                    <img src="./images/rate_2.png" alt="rate" /> 20K
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </section>
 
       <!-- 4 სექცია -->

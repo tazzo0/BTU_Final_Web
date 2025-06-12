@@ -126,121 +126,82 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 // movies  & shows სექცია 2
+function initializeSlider(sliderId) {
+  const track = document.getElementById(`slider-track-${sliderId}`);
+  const dotsContainer = document.getElementById(`slider-dots-${sliderId}`);
+  const prevButton = document.querySelector(
+    `.genre-slider-arrow-btn.prev[data-slider-id="${sliderId}"]`
+  );
+  const nextButton = document.querySelector(
+    `.genre-slider-arrow-btn.next[data-slider-id="${sliderId}"]`
+  );
 
-const slider = document.getElementById("genre-slider-track");
-const dotsContainer = document.getElementById("genre-slider-dots");
-const totalCards = slider.children.length;
-const cardsPerSlide = 5;
-const totalSlides = Math.ceil(totalCards / cardsPerSlide);
-let currentSlide = 0;
-let isTransitioning = false;
+  const cards = track.querySelectorAll(".genre-slider-card");
+  const cardStyle = getComputedStyle(cards[0]);
+  const gap = 30; // css-ში gap არის 30px,
+  const cardWidth = cards[0].offsetWidth + gap;
 
-function renderGenreSliderDots() {
+  // აქ ვაკეთებთ, რომ ყოველთვის 5 ქარდი გადავძვრე ერთ დაწკაპუნებაზე
+  const visibleCards = 5;
+
+  const totalCards = cards.length;
+  const totalSlides = Math.ceil(totalCards / visibleCards);
+
+  let currentSlide = 0;
+
   dotsContainer.innerHTML = "";
   for (let i = 0; i < totalSlides; i++) {
     const dot = document.createElement("div");
     dot.classList.add("genre-slider-dot");
-    if (i === currentSlide) dot.classList.add("active");
+    if (i === 0) dot.classList.add("active");
     dotsContainer.appendChild(dot);
   }
-}
+  const dots = dotsContainer.querySelectorAll(".genre-slider-dot");
 
-function updateGenreSlider() {
-  const cardWidth =
-    document.querySelector(".genre-slider-card").offsetWidth + 30; // 30px margin
-  const moveX = currentSlide * cardWidth * cardsPerSlide;
-  slider.style.transition = "transform 1s cubic-bezier(0.77, 0, 0.175, 1)";
-  slider.style.transform = `translateX(-${moveX}px)`;
-  renderGenreSliderDots();
-}
-
-function genreSliderNext() {
-  if (isTransitioning) return;
-  currentSlide++;
-  if (currentSlide >= totalSlides) {
-    currentSlide = 0;
-  }
-  isTransitioning = true;
-  updateGenreSlider();
-  setTimeout(() => {
-    isTransitioning = false;
-  }, 1000);
-}
-
-
-
-function genreSliderPrev() {
-  if (isTransitioning) return;
-  currentSlide--;
-  if (currentSlide < 0) {
-    currentSlide = totalSlides - 1;
-  }
-  isTransitioning = true;
-  updateGenreSlider();
-  setTimeout(() => {
-    isTransitioning = false;
-  }, 1000);
-}
-
-window.addEventListener("resize", updateGenreSlider);
-window.addEventListener("load", () => {
-  renderGenreSliderDots();
-  updateGenreSlider();
-});
-
-
-document.querySelectorAll(".genre-slider").forEach((section) => {
-  const sliderId = section.dataset.sliderId;
-  const track = section.querySelector(".genre-slider-track");
-  const dotsContainer = section.querySelector(".genre-slider-dots");
-  const cards = section.querySelectorAll(".genre-slider-card");
-  const prevBtn = section.querySelector(".genre-slider-prev");
-  const nextBtn = section.querySelector(".genre-slider-next");
-
-  const cardsPerSlide = 5;
-  const totalSlides = Math.ceil(cards.length / cardsPerSlide);
-  let currentSlide = 0;
-  let isTransitioning = false;
-
-  const renderDots = () => {
-    dotsContainer.innerHTML = "";
-    for (let i = 0; i < totalSlides; i++) {
-      const dot = document.createElement("div");
-      dot.classList.add("genre-slider-dot");
-      if (i === currentSlide) dot.classList.add("active");
-      dotsContainer.appendChild(dot);
+  function updateSlider() {
+    if (currentSlide >= totalSlides) {
+      currentSlide = 0;
     }
-  };
+    if (currentSlide < 0) {
+      currentSlide = totalSlides - 1;
+    }
 
-  const updateSlider = () => {
-    const cardWidth = cards[0].offsetWidth + 16;
-    const moveX = currentSlide * cardWidth * cardsPerSlide;
-    track.style.transition = "transform 1s cubic-bezier(0.77, 0, 0.175, 1)";
-    track.style.transform = `translateX(-${moveX}px)`;
-    renderDots();
-  };
+    track.style.transform = `translateX(-${
+      currentSlide * cardWidth * visibleCards
+    }px)`;
 
-  const nextSlide = () => {
-    if (isTransitioning) return;
-    currentSlide = (currentSlide + 1) % totalSlides;
-    isTransitioning = true;
+    dots.forEach((dot) => dot.classList.remove("active"));
+    if (dots[currentSlide]) {
+      dots[currentSlide].classList.add("active");
+    }
+  }
+
+  prevButton.addEventListener("click", () => {
+    currentSlide--;
     updateSlider();
-    setTimeout(() => (isTransitioning = false), 1000);
-  };
+  });
 
-  const prevSlide = () => {
-    if (isTransitioning) return;
-    currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
-    isTransitioning = true;
+  nextButton.addEventListener("click", () => {
+    currentSlide++;
     updateSlider();
-    setTimeout(() => (isTransitioning = false), 1000);
-  };
+  });
 
-  nextBtn.addEventListener("click", nextSlide);
-  prevBtn.addEventListener("click", prevSlide);
-  window.addEventListener("resize", updateSlider);
-  window.addEventListener("load", updateSlider);
+  dots.forEach((dot, index) => {
+    dot.addEventListener("click", () => {
+      currentSlide = index;
+      updateSlider();
+    });
+  });
 
-  renderDots();
+  window.addEventListener("resize", () => {
+    updateSlider();
+  });
+
   updateSlider();
-});
+}
+
+// ინიციალიზაცია სახვადასხვა სექციებისთვის სექციისთვის
+initializeSlider("movies");
+initializeSlider("popular");
+initializeSlider("New_Releases");
+
