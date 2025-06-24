@@ -30,33 +30,11 @@ document.querySelectorAll(".faq-item").forEach((item) => {
 
 // movies  & shows სექცია 1
 
-const slides = [
-  {
-    image: "./images/Avengers.jpg",
-    title: "Avengers: Endgame",
-    description:
-      "With the help of remaining allies, the Avengers must assemble once more in order to undo Thanos' actions and restore balance to the universe.",
-  },
-  {
-    image: "./images/star_wars_3.jpg",
-    title: "Star Wars: Episode III - Revenge of the Sith",
-    description:
-      "Anakin Skywalker is lured to the dark side of the Force and becomes Darth Vader, leading to the fall of the Jedi Order.",
-  },
-  {
-    image: "./images/2001.jpg",
-    title: "2001: A Space Odyssey",
-    description:
-      "A voyage to Jupiter with the sentient computer HAL-9000, exploring themes of evolution, technology, and artificial intelligence.",
-  },
-  {
-    image: "./images/fox.jpg",
-    title: "Fantastic Mr. Fox",
-    description:
-      "A clever fox must outsmart three mean farmers to protect his family and friends in this stop-motion animated film.",
-  },
-];
+//api, fetch გამოყენება =======
+const API_KEY = "bb732a542bd54a4285d474dde9941c5e";
+const IMAGE_BASE = "https://image.tmdb.org/t/p/original";
 
+let movies = []; // აქ ჩაიტვირთება ფილმები
 let current = 0;
 let autoSlideInterval;
 
@@ -66,17 +44,33 @@ const descEl = document.getElementById("slide-description");
 const progressBar = document.getElementById("progress-bar");
 const slideContent = document.querySelector(".slide-content");
 
+async function loadMovies() {
+  const resp = await fetch(
+    `https://api.themoviedb.org/3/movie/popular?api_key=${API_KEY}` // მოაქვს პოპულარული ფილმები
+  );
+  const data = await resp.json();
+  movies = data.results.slice(0, 5).map((movie) => {
+    return {
+      image: IMAGE_BASE + movie.backdrop_path,
+      title: movie.title,
+      description: movie.overview,
+    };
+  });
+  updateSlide();
+  startAutoSlide();
+}
+
 function updateSlide() {
   slideContent.classList.add("fade-out");
-
   setTimeout(() => {
-    const slide = slides[current];
+    const slide = movies[current];
     slider1.style.backgroundImage = `url(${slide.image})`;
     titleEl.textContent = slide.title;
     descEl.textContent = slide.description;
 
+    // პროგრესის წერტილები
     progressBar.innerHTML = "";
-    slides.forEach((_, index) => {
+    movies.forEach((_, index) => {
       const dot = document.createElement("div");
       dot.className = "dot";
       if (index === current) {
@@ -84,46 +78,45 @@ function updateSlide() {
       }
       progressBar.appendChild(dot);
     });
-
     slideContent.classList.remove("fade-out");
-  }, 700); // ⏱ აქ გაიზარდა ვადა, რაც უფრო "ნელი" გადასვლისთვისაა
+    slideContent.classList.add("fade-in");
+    setTimeout(() => slideContent.classList.remove("fade-in"), 500);
+  }, 700);
 }
 
 function goToNextSlide() {
-  current = (current + 1) % slides.length;
+  current = (current + 1) % movies.length;
   updateSlide();
 }
 
 function goToPrevSlide() {
-  current = (current - 1 + slides.length) % slides.length;
+  current = (current - 1 + movies.length) % movies.length;
   updateSlide();
 }
 
 function startAutoSlide() {
   autoSlideInterval = setInterval(() => {
     goToNextSlide();
-  }, 5000); // ⏱ 5 წამში ერთხელ ცვლის ავტომატურად
+  }, 5000);
 }
-
-document.getElementById("nextBtn").addEventListener("click", () => {
-  goToNextSlide();
-  resetAutoSlide();
-});
-
-document.getElementById("prevBtn").addEventListener("click", () => {
-  goToPrevSlide();
-  resetAutoSlide();
-});
 
 function resetAutoSlide() {
   clearInterval(autoSlideInterval);
   startAutoSlide();
 }
 
-document.addEventListener("DOMContentLoaded", () => {
-  updateSlide();
-  startAutoSlide();
+// ღილაკები
+document.getElementById("nextBtn").addEventListener("click", () => {
+  goToNextSlide();
+  resetAutoSlide();
 });
+document.getElementById("prevBtn").addEventListener("click", () => {
+  goToPrevSlide();
+  resetAutoSlide();
+});
+
+// ჩატვირთვა
+document.addEventListener("DOMContentLoaded", loadMovies);
 
 // movies  & shows სექცია 2
 function initializeSlider(sliderId) {
@@ -204,4 +197,3 @@ function initializeSlider(sliderId) {
 initializeSlider("movies");
 initializeSlider("popular");
 initializeSlider("New_Releases");
-
