@@ -119,6 +119,86 @@ document.getElementById("prevBtn").addEventListener("click", () => {
 document.addEventListener("DOMContentLoaded", loadMovies);
 
 // movies  & shows სექცია 2
+// function initializeSlider(sliderId) {
+//   const track = document.getElementById(`slider-track-${sliderId}`);
+//   const dotsContainer = document.getElementById(`slider-dots-${sliderId}`);
+//   const prevButton = document.querySelector(
+//     `.genre-slider-arrow-btn.prev[data-slider-id="${sliderId}"]`
+//   );
+//   const nextButton = document.querySelector(
+//     `.genre-slider-arrow-btn.next[data-slider-id="${sliderId}"]`
+//   );
+
+//   const cards = track.querySelectorAll(".genre-slider-card");
+//   const cardStyle = getComputedStyle(cards[0]);
+//   const gap = 30; // css-ში gap არის 30px,
+//   const cardWidth = cards[0].offsetWidth + gap;
+
+//   // აქ ვაკეთებთ, რომ ყოველთვის 5 ქარდი გადავძვრე ერთ დაწკაპუნებაზე
+//   const visibleCards = 5;
+
+//   const totalCards = cards.length;
+//   const totalSlides = Math.ceil(totalCards / visibleCards);
+
+//   let currentSlide = 0;
+
+//   dotsContainer.innerHTML = "";
+//   for (let i = 0; i < totalSlides; i++) {
+//     const dot = document.createElement("div");
+//     dot.classList.add("genre-slider-dot");
+//     if (i === 0) dot.classList.add("active");
+//     dotsContainer.appendChild(dot);
+//   }
+//   const dots = dotsContainer.querySelectorAll(".genre-slider-dot");
+
+//   function updateSlider() {
+//     if (currentSlide >= totalSlides) {
+//       currentSlide = 0;
+//     }
+//     if (currentSlide < 0) {
+//       currentSlide = totalSlides - 1;
+//     }
+
+//     track.style.transform = `translateX(-${
+//       currentSlide * cardWidth * visibleCards
+//     }px)`;
+
+//     dots.forEach((dot) => dot.classList.remove("active"));
+//     if (dots[currentSlide]) {
+//       dots[currentSlide].classList.add("active");
+//     }
+//   }
+
+//   prevButton.addEventListener("click", () => {
+//     currentSlide--;
+//     updateSlider();
+//   });
+
+//   nextButton.addEventListener("click", () => {
+//     currentSlide++;
+//     updateSlider();
+//   });
+
+//   dots.forEach((dot, index) => {
+//     dot.addEventListener("click", () => {
+//       currentSlide = index;
+//       updateSlider();
+//     });
+//   });
+
+//   window.addEventListener("resize", () => {
+//     updateSlider();
+//   });
+
+//   updateSlider();
+// }
+
+// // ინიციალიზაცია სახვადასხვა სექციებისთვის სექციისთვის
+// initializeSlider("movies");
+// initializeSlider("popular");
+// initializeSlider("New_Releases");
+
+// ---------------------------------
 function initializeSlider(sliderId) {
   const track = document.getElementById(`slider-track-${sliderId}`);
   const dotsContainer = document.getElementById(`slider-dots-${sliderId}`);
@@ -128,30 +208,44 @@ function initializeSlider(sliderId) {
   const nextButton = document.querySelector(
     `.genre-slider-arrow-btn.next[data-slider-id="${sliderId}"]`
   );
-
   const cards = track.querySelectorAll(".genre-slider-card");
-  const cardStyle = getComputedStyle(cards[0]);
-  const gap = 30; // css-ში gap არის 30px,
-  const cardWidth = cards[0].offsetWidth + gap;
-
-  // აქ ვაკეთებთ, რომ ყოველთვის 5 ქარდი გადავძვრე ერთ დაწკაპუნებაზე
-  const visibleCards = 5;
-
-  const totalCards = cards.length;
-  const totalSlides = Math.ceil(totalCards / visibleCards);
+  const gap = 30;
 
   let currentSlide = 0;
 
-  dotsContainer.innerHTML = "";
-  for (let i = 0; i < totalSlides; i++) {
-    const dot = document.createElement("div");
-    dot.classList.add("genre-slider-dot");
-    if (i === 0) dot.classList.add("active");
-    dotsContainer.appendChild(dot);
+  function getVisibleCards() {
+    const screenWidth = window.innerWidth;
+
+    if (screenWidth >= 1600) return 5;
+    if (screenWidth >= 1200) return 4;
+    if (screenWidth >= 768) return 3;
+    return 1;
   }
-  const dots = dotsContainer.querySelectorAll(".genre-slider-dot");
+
+  function getCardWidth() {
+    const cardStyle = getComputedStyle(cards[0]);
+    return cards[0].offsetWidth + gap;
+  }
+
+  function getTotalSlides(visibleCards) {
+    return Math.ceil(cards.length / visibleCards);
+  }
+
+  function createDots(totalSlides) {
+    dotsContainer.innerHTML = ""; // გაწმენდა
+    for (let i = 0; i < totalSlides; i++) {
+      const dot = document.createElement("div");
+      dot.classList.add("genre-slider-dot");
+      if (i === 0) dot.classList.add("active");
+      dotsContainer.appendChild(dot);
+    }
+  }
 
   function updateSlider() {
+    const visibleCards = getVisibleCards();
+    const cardWidth = getCardWidth();
+    const totalSlides = getTotalSlides(visibleCards);
+
     if (currentSlide >= totalSlides) {
       currentSlide = 0;
     }
@@ -163,37 +257,51 @@ function initializeSlider(sliderId) {
       currentSlide * cardWidth * visibleCards
     }px)`;
 
+    const dots = dotsContainer.querySelectorAll(".genre-slider-dot");
     dots.forEach((dot) => dot.classList.remove("active"));
     if (dots[currentSlide]) {
       dots[currentSlide].classList.add("active");
     }
   }
 
-  prevButton.addEventListener("click", () => {
-    currentSlide--;
-    updateSlider();
-  });
-
-  nextButton.addEventListener("click", () => {
-    currentSlide++;
-    updateSlider();
-  });
-
-  dots.forEach((dot, index) => {
-    dot.addEventListener("click", () => {
-      currentSlide = index;
+  function attachEvents() {
+    prevButton.addEventListener("click", () => {
+      currentSlide--;
       updateSlider();
     });
-  });
+    nextButton.addEventListener("click", () => {
+      currentSlide++;
+      updateSlider();
+    });
+    dotsContainer.addEventListener("click", (e) => {
+      if (e.target.classList.contains("genre-slider-dot")) {
+        const dots = Array.from(
+          dotsContainer.querySelectorAll(".genre-slider-dot")
+        );
+        currentSlide = dots.indexOf(e.target);
+        updateSlider();
+      }
+    });
+    window.addEventListener("resize", () => {
+      initialize();
+    });
+  }
 
-  window.addEventListener("resize", () => {
+  function initialize() {
+    const visibleCards = getVisibleCards();
+    const totalSlides = getTotalSlides(visibleCards);
+    createDots(totalSlides);
+    currentSlide = Math.min(currentSlide, totalSlides - 1);
     updateSlider();
-  });
+  }
 
-  updateSlider();
+  attachEvents();
+  initialize();
 }
 
-// ინიციალიზაცია სახვადასხვა სექციებისთვის სექციისთვის
+// ინიციალიზება სექციებისთვის
 initializeSlider("movies");
 initializeSlider("popular");
 initializeSlider("New_Releases");
+
+//ქუქიების პოლიტიკა მათზე დათანხმება რესტარტდება 10 წუთში

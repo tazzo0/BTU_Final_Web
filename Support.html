@@ -12,6 +12,8 @@
   >.
   <body>
     <div class="container">
+      <!-- Header კონტენტი -->
+
       <header>
         <a href="./index.html"><img src="./images/Logo.png" alt="logo" /></a>
 
@@ -34,12 +36,8 @@
         </div>
 
         <div class="zari_div">
-          <a href="./index.html"
-            ><img src="./images/lupa.png" alt="lupa"
-          /></a>
-          <a href="./index.html"
-            ><img src="./images/zari.png" alt="zari"
-          /></a>
+          <a href="./index.html"><img src="./images/lupa.png" alt="lupa" /></a>
+          <a href="./index.html"><img src="./images/zari.png" alt="zari" /></a>
         </div>
         <button class="burger_button burger">
           <img src="./images/burger.png" alt="burger" />
@@ -49,13 +47,316 @@
         </button>
       </header>
       <!-- 1 სექცია -->
-       <section class="main_sec">
-        
-       </section>
+      <section class="support_sec1">
+        <div class="support_sec1_left">
+          <div class="support_sec1_headers">
+            <h1>Welcome to our support page!</h1>
+            <h3>
+              We're here to help you with any problems you may be having with
+              our product.
+            </h3>
+          </div>
+          <div class="support_sec1_headers_pic"></div>
+        </div>
 
+        <!-- form div -->
+        <form id="supportForm" class="form-wrapper">
+          <div class="row">
+            <div class="input-group">
+              <label>First Name</label>
+              <input id="firstName" placeholder="Enter First Name" />
+              <span class="error" id="errorFirstName"></span>
+            </div>
+            <div class="input-group">
+              <label>Last Name</label>
+              <input id="lastName" placeholder="Enter Last Name" />
+              <span class="error" id="errorLastName"></span>
+            </div>
+          </div>
+          <div class="row">
+            <div class="input-group">
+              <label>Email</label>
+              <input id="email" placeholder="Enter your Email" />
+              <span class="error" id="errorEmail"></span>
+            </div>
+            <div class="input-group">
+              <label>Phone Number</label>
+              <input id="phone" placeholder="Enter Phone Number" />
+              <span class="error" id="errorPhone"></span>
+            </div>
+          </div>
+          <div class="input-group">
+            <label>Password</label>
+            <input
+              id="password"
+              type="password"
+              placeholder="Enter your Password"
+            />
+            <span class="show-password" id="showPassword">Show</span>
+            <span class="error" id="errorPassword"></span>
+          </div>
+          <div class="input-group">
+            <label>Message</label>
+            <textarea
+              id="message"
+              placeholder="Enter your Message"
+              rows="5"
+            ></textarea>
+            <span class="error" id="errorMessage"></span>
+          </div>
+          <div class="actions">
+            <div class="terms">
+              <input type="checkbox" id="terms" /> I agree with Terms of Use and
+              Privacy Policy
+              <span class="error" id="errorTerms"></span>
+            </div>
+            <button class="send-button" type="submit">Send Message</button>
+          </div>
+        </form>
+      </section>
 
+      <!-- 2 სექცია -->
+      <section class="sec3">
+        <div class="sec3_headers_button">
+          <div class="sec3_headers">
+            <h2>Frequently Asked Questions</h2>
+            <p>
+              Got questions? We've got answers! Check out our FAQ section to
+              find answers to the most common questions about StreamVibe.
+            </p>
+          </div>
+          <a href="./Support.html"> <button>Ask a Question</button></a>
+        </div>
+        <div class="faq-wrapper">
+          <div class="faq-container">
+            <div class="faq-column">
+              <div class="faq-item">
+                <div class="faq-header">
+                  <span>01</span> What is StreamVibe?
+                  <div class="toggle-btn">+</div>
+                </div>
+                <div class="faq-content">
+                  StreamVibe is a streaming service that allows you to watch
+                  movies and shows on demand.
+                </div>
+                <div class="for_gradient"></div>
+              </div>
 
+              <div class="faq-item">
+                <div class="faq-header">
+                  <span>02</span> How much does StreamVibe cost?
+                  <div class="toggle-btn">+</div>
+                </div>
+                <div class="faq-content">
+                  StreamVibe offers a range of plans starting at $9.99 per
+                  month.
+                </div>
+              </div>
+              <div class="for_gradient"></div>
+              <div class="faq-item">
+                <div class="faq-header">
+                  <span>03</span> What content is available on StreamVibe?
+                  <div class="toggle-btn">+</div>
+                </div>
+                <div class="faq-content">
+                  You can find movies, series, documentaries, and more.
+                </div>
+                <div class="for_gradient"></div>
+              </div>
+              <div class="faq-item">
+                <div class="faq-header">
+                  <span>04</span> How can I watch StreamVibe?
+                  <div class="toggle-btn">+</div>
+                </div>
+                <div class="faq-content">
+                  You can watch on smart TVs, mobile devices, or via web
+                  browsers.
+                </div>
+                <div class="for_gradient"></div>
+              </div>
+            </div>
+            <div class="faq-column">
+              <div class="faq-item">
+                <div class="faq-header">
+                  <span>05</span> How do I sign up for StreamVibe?
+                  <div class="toggle-btn">+</div>
+                </div>
+                <div class="faq-content">
+                  Go to our homepage and click Sign Up.
+                </div>
+                <div class="for_gradient"></div>
+              </div>
+              <div class="faq-item">
+                <div class="faq-header">
+                  <span>06</span> What is the StreamVibe free trial?
+                  <div class="toggle-btn">+</div>
+                </div>
+                <div class="faq-content">
+                  We offer a 7-day free trial for new users.
+                </div>
+              </div>
+              <div class="for_gradient"></div>
+              <div class="faq-item">
+                <div class="faq-header">
+                  <span>07</span> How do I contact StreamVibe customer support?
+                  <div class="toggle-btn">+</div>
+                </div>
+                <div class="faq-content">
+                  You can contact support via email or our Help Center.
+                </div>
+                <div class="for_gradient"></div>
+              </div>
+              <div class="faq-item">
+                <div class="faq-header">
+                  <span>08</span> What are the StreamVibe payment methods?
+                  <div class="toggle-btn">+</div>
+                </div>
+                <div class="faq-content">
+                  We accept credit cards, PayPal, and other major payment
+                  options.
+                </div>
+                <div class="for_gradient"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 3 სექცია -->
+
+      <section class="sec4">
+        <div class="sec4_div">
+          <div class="sec4_headers_button">
+            <div class="sec4_header">
+              <h2>Start your free trial today!</h2>
+              <p>
+                This is a clear and concise call to action that encourages users
+                to sign up for a free trial of StreamVibe.
+              </p>
+            </div>
+            <a href="./Support.html"><button>Start a Free Trail</button></a>
+          </div>
+        </div>
+      </section>
+
+      <!-- 4 სექცია footeer -->
+      <footer>
+        <div class="footer_navs">
+          <div class="footer_div">
+            <h4>Home</h4>
+            <nav class="footer_nav">
+              <ul class="footer_nav_ul">
+                <li>
+                  <a href="index.html" class="footer_nav_a">Categories</a>
+                </li>
+                <li>
+                  <a href="index.html" class="footer_nav_a">Devices</a>
+                </li>
+                <li>
+                  <a href="index.html" class="footer_nav_a">Pricing</a>
+                </li>
+                <li>
+                  <a href="index.html" class="footer_nav_a">FAQ</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+          <div class="footer_div">
+            <h4>Movies</h4>
+            <nav class="footer_nav">
+              <ul class="footer_nav_ul">
+                <li>
+                  <a href="index.html" class="footer_nav_a">Gernes</a>
+                </li>
+                <li>
+                  <a href="index.html" class="footer_nav_a">Trending</a>
+                </li>
+                <li>
+                  <a href="index.html" class="footer_nav_a">New Release</a>
+                </li>
+                <li>
+                  <a href="index.html" class="footer_nav_a">Popular</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+          <div class="footer_div">
+            <h4>Shows</h4>
+            <nav class="footer_nav">
+              <ul class="footer_nav_ul">
+                <li>
+                  <a href="index.html" class="footer_nav_a">Gernes</a>
+                </li>
+                <li>
+                  <a href="index.html" class="footer_nav_a">Trending</a>
+                </li>
+                <li>
+                  <a href="index.html" class="footer_nav_a">New Release</a>
+                </li>
+                <li>
+                  <a href="index.html" class="footer_nav_a">Popular</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+          <div class="footer_div">
+            <h4>Support</h4>
+            <nav class="footer_nav">
+              <ul class="footer_nav_ul">
+                <li>
+                  <a href="index.html" class="footer_nav_a">Contact Us</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+          <div class="footer_div">
+            <h4>Subscription</h4>
+            <nav class="footer_nav">
+              <ul class="footer_nav_ul">
+                <li>
+                  <a href="index.html" class="footer_nav_a">Plans</a>
+                </li>
+                <li>
+                  <a href="index.html" class="footer_nav_a">Features</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+          <div class="footer_div">
+            <h4>Connect With Us</h4>
+            <div class="for_social">
+              <div class="social_frame">
+                <a href="https://www.facebook.com/" target="_blank"
+                  ><img class="social_icon" src="./images/facebook.svg" alt=""
+                /></a>
+              </div>
+              <div class="social_frame">
+                <a href="https://x.com/" target="_blank"
+                  ><img class="social_icon" src="./images/x.svg" alt=""
+                /></a>
+              </div>
+              <div class="social_frame">
+                <a href="https://www.linkedin.com/" target="_blank"
+                  ><img class="social_icon" src="./images/linkedin.svg" alt=""
+                /></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="policy_div">
+          <h5>@2023 streamvib, All Rights Reserved</h5>
+          <div class="footer-links">
+            <a href="./Support.html">Terms of Use</a>
+            <span class="divider"></span>
+            <a href="./Support.html">Privacy Policy</a>
+            <span class="divider"></span>
+            <a href="./Support.html">Cookie Policy</a>
+          </div>
+        </div>
+      </footer>
     </div>
-    <script src="./js/script.js"></script>
+    <!-- ქუქიების ფოფაფის კოდი -->
+    <script src="./js/script.js" defer></script>
+    <script src="./js/supportForm.js"></script>
   </body>
 </html>
