@@ -1,4 +1,4 @@
-console.log("Support Form JS Loaded");
+
 // supportForm.js
 document.addEventListener("DOMContentLoaded", () => {
   const form = document.getElementById("supportForm");

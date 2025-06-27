@@ -298,10 +298,7 @@ function initializeSlider(sliderId) {
   attachEvents();
   initialize();
 }
-
 // ინიციალიზება სექციებისთვის
 initializeSlider("movies");
 initializeSlider("popular");
 initializeSlider("New_Releases");
-
-//ქუქიების პოლიტიკა მათზე დათანხმება რესტარტდება 10 წუთში
