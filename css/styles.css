@@ -772,6 +772,15 @@ footer {
   transform: translateY(-4px) scale(1.07);
 }
 
+/* ტელეფონის რეზოლუხიაზე იჭედებოდა ჰოვერი გადაჭრის გზა */
+#scrollToTopBtn:focus,
+#scrollToTopBtn:active {
+  background: var(--Black-10, #1a1a1a);
+  border-color: var(--Red-45, #e50000);
+  transform: none;
+  box-shadow: 0px 4px 18px rgba(229, 0, 0, 0.18);
+}
+
 /* Movies & Shows სტილები */
 
 .slider {
