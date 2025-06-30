@@ -965,8 +965,42 @@ footer {
   display: flex;
   flex-direction: column;
   gap: 50px;
+  position: relative;
 }
 
+/* მარცხენა მხარის blur ეფექტი */
+.genre-slider-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100px;
+  height: 100%;
+  background: linear-gradient(
+    to right,
+    rgba(20, 20, 20, 1),
+    rgba(20, 20, 20, 0)
+  );
+  z-index: 10;
+  pointer-events: none;
+}
+
+/* მარჯვენა მხარის blur ეფექტი */
+.genre-slider-container::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100px;
+  height: 100%;
+  background: linear-gradient(
+    to left,
+    rgba(20, 20, 20, 1),
+    rgba(20, 20, 20, 0)
+  );
+  z-index: 10;
+  pointer-events: none;
+}
 .genre-slider-header {
   display: flex;
   justify-content: space-between;
@@ -1069,13 +1103,14 @@ footer {
 
 /* <!-- New_Releases სექცია სტილები--> */
 
-.slider-card {
+.new-release-card {
   display: flex;
   height: 377px;
   padding: 20px;
   flex-direction: column;
   align-items: flex-start;
   gap: 20px;
+  
 }
 
 .new-release-card-header {

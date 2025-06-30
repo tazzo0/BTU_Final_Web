@@ -1,5 +1,4 @@
-@media (max-width: 1441px)  {
-
+@media (max-width: 1441px) {
   /* INDEX page სტილები */
   header {
     height: 98px;
@@ -9,7 +8,7 @@
     width: 165px;
     height: 50px;
   }
-  
+
   .nav_div {
     padding: 18px 30px;
   }
@@ -166,26 +165,132 @@
     font-size: 14px;
   }
 
+  #cookie-popup {
+    min-width: 340px;
+    max-width: 400px;
+    padding: 16px 22px;
+  }
 
+  .popup-text,
+  .btn,
+  .btn.decline {
+    font-size: 16px;
+  }
 
-#cookie-popup {
-  min-width: 340px;
-  max-width: 400px;
-  padding: 16px 22px;
+  #scrollToTopBtn {
+    bottom: 24px;
+    right: 24px;
+    padding: 14px 20px;
+    font-size: 18px;
+    border-radius: 10px;
+  }
+
+  /* Movies & Shows გვერდის უნიკალური სექციების სტილები ლეპტოპის რეზოლუციისთვის */
+
+  /* მთავარი სლაიდერი */
+
+  .slider {
+    min-height: 709px;
+    margin: 150px auto 100px;
+  }
+  .slide-content h2 {
+    font-size: 30px;
+  }
+  .slide-content p {
+    font-size: 16px;
+  }
+  .buttons {
+    margin-top: 24px;
+  }
+  .play_media {
+    gap: 8px;
+    padding: 11px;
+  }
+  .play {
+    font-size: 14px;
+  }
+
+  .arrow {
+    width: 48px;
+    height: 48px;
+    padding: 12px;
+  }
+  /* სექცია 2 სტილები */
+  .sec22 {
+    padding: 40px;
+    gap: 80px;
+  }
+
+  .section-label {
+    font-size: 16px;
+    padding: 8px 20px;
+  }
+
+  .genre-slider-section {
+    gap: 40px;
+  }
+  .genre-slider-header h2 {
+    font-size: 28px;
+  }
+
+  .genre-slider-nav-box {
+    padding: 12px;
+    gap: 12px;
+  }
+  .genre-slider-arrow-btn {
+    padding: 10px;
+  }
+  .genre-slider-track {
+    gap: 20px;
+  }
+  .genre-slider-card {
+    width: 224px;
+    height: 259px;
+    padding: 24px;
+  }
+  .genre-slider-card img {
+    height: 187px;
+  }
+  .genre-slider-title {
+    font-size: 16px;
+  }
+
+  .genre-slider-dot {
+    width: 10px;
+    height: 4px;
+  }
+  .genre-slider-dot.active {
+    width: 15px;
+  }
+  /* <!-- New_Releases სექცია სტილები--> */
+  .new-release-card {
+    padding: 16px;
+    gap: 16px;
+  }
+  .new-release-card-header {
+    font-size: 12px;
+  }
+
+  /* must watch სექციის სტილები  */
+  .slider-card_must {
+    width: 284px;
+    height: 404px;
+    padding: 16px;
+    gap: 16px;
+  }
+.must_card_img {
+  height: 324px;
 }
-
-.popup-text,
-.btn,
-.btn.decline {
-  font-size: 16px;
+.movie-length{
+  font-size: 12px;
+  gap: 2px;
 }
-
-#scrollToTopBtn {
-  bottom: 24px;
-  right: 24px;
-  padding: 14px 20px;
-  font-size: 18px;
-  border-radius: 10px;
+.movie-length img {
+  width: 20px;
+  height: 20px;
 }
-
+.movie-rate{
+  gap: 4px; 
+   font-size: 12px;
+}
 }
