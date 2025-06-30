@@ -223,7 +223,6 @@ function initializeSlider(sliderId) {
   }
 
   function getCardWidth() {
-    const cardStyle = getComputedStyle(cards[0]);
     return cards[0].offsetWidth + gap;
   }
 

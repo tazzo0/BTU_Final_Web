@@ -6,10 +6,11 @@
     <link rel="stylesheet" href="./css/reset.css" />
     <link rel="stylesheet" href="./css/styles.css" />
     <link rel="stylesheet" href="./css/leptop.css" />
+    <link rel="stylesheet" href="./css/tablet.css" />
     <link rel="stylesheet" href="./css/mobile.css" />
     <link rel="icon" href="./images/only_logo.png" />
-    <title>Movies & Shows</title></head
-  >.
+    <title>Movies & Shows</title>
+  </head>
   <body>
     <div class="container">
       <!-- Header კონტენტი -->
@@ -45,6 +46,26 @@
           <img src="./images/burger_x.png" alt="x mark" />
         </button>
       </header>
+
+      <!-- Mobile Navigation Menu -->
+      <div class="menu_overlay"></div>
+      <nav class="mobile_nav">
+        <ul class="mobile_nav_ul">
+          <li class="mobile_nav_li">
+            <a href="index.html" class="mobile_nav_a">Home</a>
+          </li>
+          <li class="mobile_nav_li">
+            <a href="Movies_&_Shows.html" class="mobile_nav_a">Movies & Shows</a>
+          </li>
+          <li class="mobile_nav_li">
+            <a href="Support.html" class="mobile_nav_a">Support</a>
+          </li>
+        </ul>
+        <div class="mobile_nav_icons">
+          <a href="./index.html"><img src="./images/lupa.png" alt="search" /></a>
+          <a href="./index.html"><img src="./images/zari.png" alt="notifications" /></a>
+        </div>
+      </nav>
 
       <!-- 1 სექცია -->
       <section class="slider">
@@ -112,23 +133,23 @@
               id="slider-track-movies"
             >
               <div class="genre-slider-card slider-card">
-                <img src="./images/action.png" />
+                <img src="./images/action.png" alt="Action genre" />
                 <div class="genre-slider-title">Action</div>
               </div>
               <div class="genre-slider-card slider-card">
-                <img src="./images/adventure.png" />
+                <img src="./images/adventure.png" alt="Adventure genre" />
                 <div class="genre-slider-title">Adventure</div>
               </div>
               <div class="genre-slider-card slider-card">
-                <img src="./images/comedy.png" />
+                <img src="./images/comedy.png" alt="Comedy genre" />
                 <div class="genre-slider-title">Comedy</div>
               </div>
               <div class="genre-slider-card slider-card">
-                <img src="./images/Drama.png" />
+                <img src="./images/Drama.png" alt="Drama genre" />
                 <div class="genre-slider-title">Drama</div>
               </div>
               <div class="genre-slider-card slider-card">
-                <img src="./images/horror.png" />
+                <img src="./images/horror.png" alt="Horror genre" />
                 <div class="genre-slider-title">Horror</div>
               </div>
               <div class="genre-slider-card slider-card">
@@ -224,19 +245,19 @@
               id="slider-track-popular"
             >
               <div class="genre-slider-card slider-card">
-                <img src="./images/action2.png" />
+                <img src="./images/action2.png" alt="Action genre" />
                 <div class="genre-slider-title">Action</div>
               </div>
               <div class="genre-slider-card slider-card">
-                <img src="./images/adventure2.png" />
+                <img src="./images/adventure2.png" alt="Adventure genre" />
                 <div class="genre-slider-title">Adventure</div>
               </div>
               <div class="genre-slider-card slider-card">
-                <img src="./images/comedy2.png" />
+                <img src="./images/comedy2.png" alt="Comedy genre" />
                 <div class="genre-slider-title">Comedy</div>
               </div>
               <div class="genre-slider-card slider-card">
-                <img src="./images/drama2.png" />
+                <img src="./images/drama2.png" alt="Drama genre" />
                 <div class="genre-slider-title">Drama</div>
               </div>
               <div class="genre-slider-card slider-card">
@@ -317,31 +338,31 @@
               id="slider-track-New_Releases"
             >
               <div class="genre-slider-card slider-card">
-                <img src="./images/adipurush.png" />
+                <img src="./images/adipurush.png" alt="Adipurush movie poster" />
                 <div class="new-release-card-header">
                   Released at 14 April 2023
                 </div>
               </div>
               <div class="genre-slider-card slider-card">
-                <img src="./images/run.png" />
+                <img src="./images/run.png" alt="Run movie poster" />
                 <div class="new-release-card-header">
                   Released at 22 April 2023
                 </div>
               </div>
               <div class="genre-slider-card slider-card">
-                <img src="./images/sin_city.png" />
+                <img src="./images/sin_city.png" alt="Sin City movie poster" />
                 <div class="new-release-card-header">
                   Released at 13 April 2023
                 </div>
               </div>
               <div class="genre-slider-card slider-card">
-                <img src="./images/tomorrow_war.png" />
+                <img src="./images/tomorrow_war.png" alt="Tomorrow War movie poster" />
                 <div class="new-release-card-header">
                   Released at 19 April 2023
                 </div>
               </div>
               <div class="genre-slider-card slider-card">
-                <img src="./images/missfire.png" />
+                <img src="./images/missfire.png" alt="Missfire movie poster" />
                 <div class="new-release-card-header">
                   Released at 11 April 2023
                 </div>
@@ -444,12 +465,12 @@
 
         <div class="genre-slider-section" data-slider-id="Must">
           <div class="genre-slider-header">
-            <h2>NMust - Watch Movies</h2>
+            <h2>Must - Watch Movies</h2>
           </div>
           <div class="genre-slider-container">
             <div class="slider-track slider-track1" id="slider-track-Must">
               <div class="slider-card_must">
-                <img class="must_card_img" src="./images/kantara.png" />
+                <img class="must_card_img" src="./images/kantara.png" alt="Kantara movie poster" />
                 <div class="must_watch_div">
                   <div class="movie-length">
                     <img src="./images/clock.svg" alt="clock" />1h 57min
@@ -460,7 +481,7 @@
                 </div>
               </div>
               <div class="slider-card_must">
-                <img class="must_card_img" src="./images/pusha.png" />
+                <img class="must_card_img" src="./images/pusha.png" alt="Pusha movie poster" />
                 <div class="must_watch_div">
                   <div class="movie-length">
                     <img src="./images/clock.svg" alt="clock" />1h 30min
@@ -471,7 +492,7 @@
                 </div>
               </div>
               <div class="slider-card_must">
-                <img class="must_card_img" src="./images/blade.png" />
+                <img class="must_card_img" src="./images/blade.png" alt="Blade movie poster" />
                 <div class="must_watch_div">
                   <div class="movie-length">
                     <img src="./images/clock.svg" alt="clock" />1h 42min
@@ -603,17 +624,17 @@
             <div class="for_social">
               <div class="social_frame">
                 <a href="https://www.facebook.com/" target="_blank"
-                  ><img class="social_icon" src="./images/facebook.svg" alt=""
+                  ><img class="social_icon" src="./images/facebook.svg" alt="Facebook"
                 /></a>
               </div>
               <div class="social_frame">
                 <a href="https://x.com/" target="_blank"
-                  ><img class="social_icon" src="./images/x.svg" alt=""
+                  ><img class="social_icon" src="./images/x.svg" alt="X (Twitter)"
                 /></a>
               </div>
               <div class="social_frame">
                 <a href="https://www.linkedin.com/" target="_blank"
-                  ><img class="social_icon" src="./images/linkedin.svg" alt=""
+                  ><img class="social_icon" src="./images/linkedin.svg" alt="LinkedIn"
                 /></a>
               </div>
             </div>
@@ -651,5 +672,6 @@
     <script src="./js/script.js"></script>
     <script src="./js/cookies.js"></script>
     <script src="./js/scrollUp.js"></script>
+    <script src="./js/burger.js"></script>
   </body>
 </html>

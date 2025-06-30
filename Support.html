@@ -6,10 +6,11 @@
     <link rel="stylesheet" href="./css/reset.css" />
     <link rel="stylesheet" href="./css/styles.css" />
     <link rel="stylesheet" href="./css/leptop.css" />
+    <link rel="stylesheet" href="./css/tablet.css" />
     <link rel="stylesheet" href="./css/mobile.css" />
     <link rel="icon" href="./images/only_logo.png" />
-    <title>StreamVibe</title></head
-  >.
+    <title>StreamVibe - support</title>
+  </head>
   <body>
     <div class="container">
       <!-- Header კონტენტი -->
@@ -46,6 +47,33 @@
           <img src="./images/burger_x.png" alt="x mark" />
         </button>
       </header>
+
+      <!-- Mobile Navigation Menu -->
+      <div class="menu_overlay"></div>
+      <nav class="mobile_nav">
+        <ul class="mobile_nav_ul">
+          <li class="mobile_nav_li">
+            <a href="index.html" class="mobile_nav_a">Home</a>
+          </li>
+          <li class="mobile_nav_li">
+            <a href="Movies_&_Shows.html" class="mobile_nav_a"
+              >Movies & Shows</a
+            >
+          </li>
+          <li class="mobile_nav_li">
+            <a href="Support.html" class="mobile_nav_a">Support</a>
+          </li>
+        </ul>
+        <div class="mobile_nav_icons">
+          <a href="./index.html"
+            ><img src="./images/lupa.png" alt="search"
+          /></a>
+          <a href="./index.html"
+            ><img src="./images/zari.png" alt="notifications"
+          /></a>
+        </div>
+      </nav>
+
       <!-- 1 სექცია -->
       <section class="support_sec1">
         <div class="support_sec1_left">
@@ -63,30 +91,30 @@
         <form id="supportForm" class="form-wrapper">
           <div class="row">
             <div class="input-group">
-              <label>First Name</label>
+              <label for="firstName">First Name</label>
               <input id="firstName" placeholder="Enter First Name" />
               <span class="error" id="errorFirstName"></span>
             </div>
             <div class="input-group">
-              <label>Last Name</label>
+              <label for="lastName">Last Name</label>
               <input id="lastName" placeholder="Enter Last Name" />
               <span class="error" id="errorLastName"></span>
             </div>
           </div>
           <div class="row">
             <div class="input-group">
-              <label>Email</label>
-              <input id="email" placeholder="Enter your Email" />
+              <label for="email">Email</label>
+              <input id="email" type="email" placeholder="Enter your Email" />
               <span class="error" id="errorEmail"></span>
             </div>
             <div class="input-group">
-              <label>Phone Number</label>
-              <input id="phone" placeholder="Enter Phone Number" />
+              <label for="phone">Phone Number</label>
+              <input id="phone" type="tel" placeholder="Enter Phone Number" />
               <span class="error" id="errorPhone"></span>
             </div>
           </div>
           <div class="input-group">
-            <label>Password</label>
+            <label for="password">Password</label>
             <input
               id="password"
               type="password"
@@ -96,7 +124,7 @@
             <span class="error" id="errorPassword"></span>
           </div>
           <div class="input-group">
-            <label>Message</label>
+            <label for="message">Message</label>
             <textarea
               id="message"
               placeholder="Enter your Message"
@@ -151,8 +179,8 @@
                   StreamVibe offers a range of plans starting at $9.99 per
                   month.
                 </div>
+                <div class="for_gradient"></div>
               </div>
-              <div class="for_gradient"></div>
               <div class="faq-item">
                 <div class="faq-header">
                   <span>03</span> What content is available on StreamVibe?
@@ -194,8 +222,8 @@
                 <div class="faq-content">
                   We offer a 7-day free trial for new users.
                 </div>
+                <div class="for_gradient"></div>
               </div>
-              <div class="for_gradient"></div>
               <div class="faq-item">
                 <div class="faq-header">
                   <span>07</span> How do I contact StreamVibe customer support?
@@ -234,7 +262,7 @@
                 to sign up for a free trial of StreamVibe.
               </p>
             </div>
-            <a href="./Support.html"><button>Start a Free Trail</button></a>
+            <a href="./Support.html"><button>Start a Free Trial</button></a>
           </div>
         </div>
       </section>
@@ -376,5 +404,6 @@
     <script src="./js/cookies.js"></script>
     <script src="./js/scrollUp.js"></script>
     <script src="./js/supportForm.js"></script>
+    <script src="./js/burger.js"></script>
   </body>
 </html>

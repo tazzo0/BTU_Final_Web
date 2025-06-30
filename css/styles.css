@@ -79,21 +79,65 @@ header {
   justify-content: center;
   cursor: pointer;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
-  display: none;
   border: none;
+  display: none;
+}
+
+.burger,
+.x_mark {
+  display: none !important;
+}
+
+.mobile_nav {
+  display: none !important;
+}
+
+.menu_overlay {
+  display: none !important;
+}
+
+/* Mobile navigation - hidden by default */
+.mobile_nav {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 300px;
+  height: 100vh;
+  background: #0f0f0f;
+  transition: all 0.3s ease-in-out;
+  z-index: 1001;
+  padding: 100px 30px 30px;
+  box-shadow: -5px 0 15px rgba(0, 0, 0, 0.3);
+  visibility: hidden;
+  opacity: 0;
+  overflow: hidden;
+  display: none;
+}
+
+.menu_overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 20000;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  display: none;
 }
 
 /* 1 სექციის სტილები */
 .main_sec {
   margin-top: -20px;
-  height: 1092px;
+  min-height: 1092px;
   background-image: url("../images/sec1_cov.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   position: relative;
   z-index: 0;
-  /* background-color: #1e1e1e; */
 }
 
 @keyframes rotate-image {
@@ -191,7 +235,6 @@ header {
 /* 2 სექციის სტილები */
 .sec2 {
   width: min(100%, 1597px);
-  /* height: 801px; */
   margin: 432px auto 150px;
 }
 
@@ -361,7 +404,6 @@ header {
 
 .faq-item {
   background: #141414;
-
   padding: 34px;
   cursor: pointer;
 }
@@ -701,7 +743,6 @@ footer {
   color: #fff;
 }
 
-
 /* Scroll to Top Button სტილი  */
 #scrollToTopBtn {
   position: fixed;
@@ -719,11 +760,7 @@ footer {
   z-index: 1000;
   font-family: "Manrope", sans-serif;
   font-weight: 600;
-  transition:
-    background 0.3s,
-    color 0.3s,
-    box-shadow 0.3s,
-    border-color 0.3s,
+  transition: background 0.3s, color 0.3s, box-shadow 0.3s, border-color 0.3s,
     transform 0.2s;
 }
 
@@ -734,8 +771,6 @@ footer {
   box-shadow: 0 0 18px 4px #e50000;
   transform: translateY(-4px) scale(1.07);
 }
-
-
 
 /* Movies & Shows სტილები */
 
@@ -1051,11 +1086,26 @@ footer {
 }
 
 /* <!-- Most watched სექცია --> */
-
 .slider-track1 {
   display: flex;
   gap: 20px;
   transition: transform 1s cubic-bezier(0.77, 0, 0.175, 1);
+  overflow-x: auto;
+  overflow-y: hidden;
+  -webkit-overflow-scrolling: touch;
+  /* Prevent unwanted vertical scrollbars */
+  scrollbar-width: thin;
+  scrollbar-color: #e50000 #1a1a1a;
+}
+
+.slider-track1::-webkit-scrollbar {
+  height: 8px;
+  background: #1a1a1a;
+  border-radius: 4px;
+}
+.slider-track1::-webkit-scrollbar-thumb {
+  background: #e50000;
+  border-radius: 4px;
 }
 
 .slider-card_must {
@@ -1069,6 +1119,7 @@ footer {
   border-radius: 12px;
   border: 1px solid var(--Black-15, #262626);
   background: var(--Black-10, #1a1a1a);
+  flex: 0 0 auto;
 }
 
 .must_card_img {

@@ -32,7 +32,7 @@ acceptBtn.addEventListener("click", () => {
 
 // On "I Disagree"
 declineBtn.addEventListener("click", () => {
-  window.location.href = "https://google.com"; // redirect if disagree
+  window.location.href = "https://google.com";
 });
 
 // On page load

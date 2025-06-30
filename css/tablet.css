@@ -1,0 +1,610 @@
+/* დიდი ტაბლეტებისათვის 	768px-მდე */
+@media (max-width: 1025px) {
+  /* Header სტილები ტაბლეტზე */
+  header {
+    height: 90px;
+    padding: 0 40px;
+    position: relative;
+  }
+
+  .header_logo {
+    width: 150px;
+    height: 45px;
+  }
+
+  .nav_div {
+    display: none;
+  }
+
+  .burger_button {
+    display: flex !important;
+    z-index: 1002;
+    position: relative;
+  }
+
+  .burger {
+    display: flex !important;
+  }
+
+  .x_mark {
+    display: none !important;
+  }
+
+  /* დესკტოპის ნავიგაცია დამალული */
+  .desktop_nav {
+    display: none;
+  }
+
+  .zari_div {
+    display: none;
+  }
+
+  .mobile_nav {
+    display: block !important;
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 300px;
+    height: 100vh;
+    background: #0f0f0f;
+    transition: right 0.3s ease-in-out;
+    z-index: 1001;
+    padding: 100px 30px 30px;
+    box-shadow: -5px 0 15px rgba(0, 0, 0, 0.3);
+    visibility: hidden;
+    opacity: 0;
+    overflow: hidden;
+  }
+
+  .mobile_nav.active {
+    right: 0;
+    visibility: visible;
+    opacity: 1;
+  }
+
+  .mobile_nav_ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .mobile_nav_li {
+    border-bottom: 1px solid #262626;
+    padding-bottom: 15px;
+  }
+
+  .mobile_nav_a {
+    color: #ffffff;
+    font-family: "Poppins", sans-serif;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 500;
+    display: block;
+    padding: 10px 0;
+    transition: color 0.3s ease;
+  }
+
+  .mobile_nav_a:hover,
+  .mobile_nav_a.active {
+    color: #e50000;
+  }
+
+  .mobile_nav_icons {
+    margin-top: 40px;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+  }
+
+  .mobile_nav_icons a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    background: #1a1a1a;
+    border-radius: 8px;
+    transition: background 0.3s ease;
+  }
+
+  .mobile_nav_icons a:hover {
+    background: #262626;
+  }
+
+  .mobile_nav_icons img {
+    width: 20px;
+    height: 20px;
+  }
+
+  /* Overlay for burger menu */
+  .menu_overlay {
+    display: block !important;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+  }
+
+  .menu_overlay.active {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  /* Example selector for width/height, update as needed */
+  .some_class_for_size {
+    width: 250px;
+    height: 250px;
+  }
+
+  .text_div {
+    top: 70%;
+    padding: 0 40px;
+  }
+
+  .text_div_child h1 {
+    font-size: 42px;
+    line-height: 1.2;
+  }
+
+  .text_div_child p {
+    font-size: 16px;
+    margin: 20px 0;
+  }
+
+  .text_div button {
+    font-size: 16px;
+    padding: 16px 24px;
+  }
+
+  /* Section 2 styles */
+  .sec2 {
+    margin-top: 180px;
+    padding: 0 40px;
+  }
+
+  .sec2_headers {
+    margin-bottom: 50px;
+  }
+
+  .sec2_headers h2 {
+    font-size: 24px;
+    margin-bottom: 16px;
+  }
+
+  .sec2_headers p {
+    font-size: 14px;
+  }
+
+  .sec2_cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    font-size: 16px;
+    line-height: 1.5;
+  }
+
+  .card {
+    flex: 1 1 calc(50% - 15px);
+    min-width: 300px;
+    padding: 35px;
+    gap: 20px;
+    font-size: 16px;
+    line-height: 1.5;
+  }
+
+  /* Section 3 styles */
+  .sec3 {
+    padding: 0 40px;
+  }
+
+  .sec3_headers_button {
+    flex-direction: column;
+    gap: 40px;
+    margin-bottom: 50px;
+    text-align: center;
+  }
+
+  .sec3_headers h2 {
+    font-size: 32px;
+  }
+
+  .sec3_headers p {
+    font-size: 18px;
+  }
+
+  .sec3_headers_button button {
+    padding: 16px 24px;
+    font-size: 16px;
+    align-self: center;
+  }
+
+  .faq-container {
+    gap: 30px;
+  }
+
+  .faq-item {
+    padding: 30px;
+  }
+
+  .faq-header {
+    font-size: 22px;
+  }
+
+  .faq-header span {
+    font-size: 18px;
+    margin-right: 20px;
+  }
+
+  .faq-content {
+    font-size: 16px;
+    line-height: 1.5;
+  }
+
+  /* Section 4 styles */
+  .sec4 {
+    min-height: 280px;
+    margin-bottom: 100px;
+  }
+
+  .sec4_div {
+    min-height: 280px;
+    padding-inline: 40px;
+  }
+
+  footer {
+    padding: 60px 40px 30px;
+    row-gap: 60px;
+  }
+
+  .footer_navs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    justify-content: space-between;
+  }
+
+  .footer_div {
+    flex: 1 1 calc(50% - 20px);
+    min-width: 200px;
+  }
+
+  .footer_div h4 {
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+
+  .footer_nav_ul {
+    row-gap: 12px;
+  }
+
+  .footer_nav_a {
+    font-size: 16px;
+  }
+
+  .social_frame {
+    width: 48px;
+    height: 48px;
+  }
+
+  .policy_div {
+    padding-top: 30px;
+    text-align: center;
+  }
+
+  .policy_div h5 {
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
+
+  .footer-links {
+    flex-direction: row;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .footer-links a {
+    font-size: 16px;
+  }
+
+  /* Cookie popup adjustments */
+  #cookie-popup {
+    min-width: 320px;
+    max-width: 450px;
+    padding: 20px 25px;
+    margin: 20px;
+  }
+
+  .popup-text,
+  .btn,
+  .btn.decline {
+    font-size: 16px;
+  }
+
+  /* Scroll to top button */
+  #scrollToTopBtn {
+    bottom: 30px;
+    right: 30px;
+    padding: 16px 24px;
+    font-size: 20px;
+    border-radius: 12px;
+  }
+}
+
+/* შედარებით მცირე ტაბლეტის სტილები 769px-დან */
+@media (max-width: 769px) {
+  /* Header სტილები */
+  header {
+    height: 80px;
+    padding: 0 25px;
+  }
+
+  .header_logo {
+    width: 130px;
+    height: 40px;
+  }
+
+  /* მთავარი ტექსტის სექცია */
+  .text_div {
+    top: 80%;
+    padding: 0 25px;
+  }
+
+  .text_div_child h1 {
+    font-size: 36px;
+    line-height: 1.1;
+  }
+
+  .text_div_child p {
+    font-size: 15px;
+    margin: 18px 0;
+  }
+
+  .text_div button {
+    font-size: 15px;
+    padding: 14px 20px;
+  }
+
+  /* Section 2 სტილები */
+  .sec2 {
+    margin-top: 150px;
+    padding: 0 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .sec2_headers {
+    margin-bottom: 50px;
+    text-align: center;
+    padding-right: 0px;
+  }
+
+  .sec2_headers h2 {
+    font-size: 22px;
+    margin-bottom: 14px;
+  }
+
+  .sec2_headers p {
+    font-size: 14px;
+  }
+
+  .sec2_cards {
+    gap: 25px;
+    font-size: 15px;
+  }
+
+  .card {
+    flex: 1 1 100%;
+    min-width: 280px;
+    padding: 30px;
+    gap: 18px;
+    font-size: 15px;
+  }
+
+  /* Section 3 სტილები */
+  .sec3 {
+    padding: 0 25px;
+  }
+
+  .sec3_headers_button {
+    gap: 35px;
+    margin-bottom: 40px;
+  }
+
+  .sec3_headers h2 {
+    font-size: 28px;
+  }
+
+  .sec3_headers p {
+    font-size: 16px;
+  }
+
+  .sec3_headers_button button {
+    padding: 14px 20px;
+    font-size: 15px;
+  }
+
+  .faq-container {
+    gap: 25px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .faq-column {
+    width: 100%;
+  }
+
+  .faq-item {
+    padding: 25px;
+    flex: 1 1 100%;
+    width: 100%;
+  }
+
+  .faq-header {
+    font-size: 20px;
+  }
+
+  .faq-header span {
+    font-size: 16px;
+    margin-right: 18px;
+  }
+
+  .faq-content {
+    font-size: 15px;
+    line-height: 1.4;
+  }
+
+  /* Section 4 სტილები */
+  .sec4 {
+    min-height: 250px;
+    margin-bottom: 80px;
+  }
+
+  .sec4_div {
+    min-height: 250px;
+    padding-inline: 25px;
+  }
+
+  .sec4_header h2 {
+    font-size: 28px;
+    margin-bottom: 14px;
+  }
+
+  .sec4_header p {
+    font-size: 16px;
+    margin-bottom: 25px;
+  }
+
+  .sec4_headers_button button {
+    padding: 10px 16px;
+    font-size: 11px;
+  }
+
+  /* Footer სტილები */
+  footer {
+    padding: 50px 25px 25px;
+    row-gap: 50px;
+  }
+
+  .footer_navs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: space-between;
+  }
+
+  .footer_div {
+    flex: 1 1 calc(50% - 15px);
+    min-width: calc(50% - 15px);
+    max-width: calc(50% - 15px);
+  }
+
+  .footer_div h4 {
+    font-size: 18px;
+    margin-bottom: 18px;
+  }
+
+  .footer_nav_ul {
+    row-gap: 10px;
+  }
+
+  .footer_nav_a {
+    font-size: 15px;
+  }
+
+  .social_icons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 30px;
+    width: 100%;
+  }
+
+  .social_frame {
+    width: 44px;
+    height: 44px;
+  }
+
+  .policy_div {
+    padding-top: 25px;
+  }
+
+  .policy_div h5 {
+    font-size: 15px;
+    margin-bottom: 18px;
+  }
+
+  .footer-links {
+    gap: 15px;
+  }
+
+  .footer-links a {
+    font-size: 15px;
+  }
+
+  /* Cookie popup adjustments */
+  #cookie-popup {
+    min-width: 300px;
+    max-width: 400px;
+    padding: 18px 22px;
+    margin: 15px;
+  }
+
+  .popup-text,
+  .btn,
+  .btn.decline {
+    font-size: 15px;
+  }
+
+  /* Scroll to top button */
+  #scrollToTopBtn {
+    bottom: 25px;
+    right: 25px;
+    padding: 14px 20px;
+    font-size: 18px;
+    border-radius: 10px;
+  }
+
+  /* Mobile nav adjustments */
+  .mobile_nav {
+    width: 280px;
+    padding: 90px 25px 25px;
+  }
+
+  .mobile_nav_ul {
+    gap: 25px;
+  }
+
+  .mobile_nav_li {
+    padding-bottom: 12px;
+  }
+
+  .mobile_nav_a {
+    font-size: 16px;
+    padding: 8px 0;
+  }
+
+  .mobile_nav_icons {
+    margin-top: 35px;
+    gap: 18px;
+  }
+
+  .mobile_nav_icons a {
+    padding: 8px;
+  }
+
+  .mobile_nav_icons img {
+    width: 18px;
+    height: 18px;
+  }
+}

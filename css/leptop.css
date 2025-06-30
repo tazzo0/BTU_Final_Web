@@ -1,0 +1,191 @@
+@media (max-width: 1441px)  {
+
+  /* INDEX page სტილები */
+  header {
+    height: 98px;
+    padding: 0 60px;
+  }
+  .header_logo {
+    width: 165px;
+    height: 50px;
+  }
+  
+  .nav_div {
+    padding: 18px 30px;
+  }
+
+  .header_nav_ul {
+    column-gap: 16px;
+  }
+
+  .header_nav_a {
+    font-size: 14px;
+  }
+  .header_nav_a.active {
+    padding: 12px 20px;
+  }
+
+  .main_sec img {
+    width: 300px;
+    height: 300px;
+  }
+
+  .text_div {
+    top: 75%;
+  }
+  .text_div_child h1 {
+    font-size: 48px;
+  }
+
+  .text_div_child p {
+    font-size: 14px;
+  }
+  .text_div button {
+    font-size: 14px;
+  }
+
+  /* section 2 styles  */
+  .sec2 {
+    margin-top: 200px;
+  }
+  .sec2_headers {
+    margin-bottom: 60px;
+  }
+  .sec2_headers h2 {
+    font-size: 28px;
+  }
+  .sec2_headers p {
+    font-size: 16px;
+  }
+  .sec2_cards {
+    gap: 20px;
+  }
+  .card {
+    padding: 40px;
+    gap: 24px;
+  }
+  .sec2_card_cont h3 {
+    font-size: 20px;
+  }
+  .card p {
+    font-size: 16px;
+  }
+  /* section 3 styles */
+  .sec3_headers_button {
+    gap: 80px;
+    margin-bottom: 60px;
+  }
+  .sec3_headers {
+    row-gap: 14px;
+  }
+  .sec3_headers h2 {
+    font-size: 28px;
+  }
+  .sec3_headers p {
+    font-size: 16px;
+  }
+  .sec3_headers_button button {
+    padding: 14px 20px;
+    font-size: 14px;
+  }
+
+  .faq-container {
+    gap: 40px;
+  }
+
+  .faq-item {
+    padding: 24px;
+  }
+  .faq-header {
+    font-size: 20px;
+  }
+  .faq-header span {
+    font-size: 16px;
+    margin-right: 15px;
+  }
+  .faq-content {
+    font-size: 16px;
+  }
+  /* სექცია 4 სტილები */
+  .sec4 {
+    min-height: 250px;
+    margin-bottom: 110px;
+  }
+  .sec4_div {
+    min-height: 250px;
+    padding-inline: 60px;
+  }
+  .sec4_header h2 {
+    font-size: 28px;
+    margin-bottom: 10px;
+  }
+  .sec4_header p {
+    font-size: 16px;
+  }
+  .sec4_headers_button button {
+    padding: 14px 20px;
+    font-size: 14px;
+  }
+  /* სექცია 5 footeer სტილები */
+
+  footer {
+    padding: 80px 0 40px;
+    row-gap: 80px;
+  }
+  .footer_navs {
+    gap: 20px;
+  }
+  .footer_div {
+    max-width: 195px;
+  }
+  .footer_div h4 {
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+
+  .footer_nav_ul {
+    row-gap: 10px;
+  }
+  .footer_nav_a {
+    font-size: 16px;
+  }
+  .social_frame {
+    width: 44px;
+    height: 44px;
+  }
+  .policy_div {
+    padding-top: 20px;
+  }
+  .policy_div h5 {
+    font-size: 14px;
+  }
+  .footer-links {
+    gap: 30px;
+  }
+  .footer-links a {
+    font-size: 14px;
+  }
+
+
+
+#cookie-popup {
+  min-width: 340px;
+  max-width: 400px;
+  padding: 16px 22px;
+}
+
+.popup-text,
+.btn,
+.btn.decline {
+  font-size: 16px;
+}
+
+#scrollToTopBtn {
+  bottom: 24px;
+  right: 24px;
+  padding: 14px 20px;
+  font-size: 18px;
+  border-radius: 10px;
+}
+
+}

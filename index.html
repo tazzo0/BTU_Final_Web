@@ -6,16 +6,17 @@
     <link rel="stylesheet" href="./css/reset.css" />
     <link rel="stylesheet" href="./css/styles.css" />
     <link rel="stylesheet" href="./css/leptop.css" />
+    <link rel="stylesheet" href="./css/tablet.css" />
     <link rel="stylesheet" href="./css/mobile.css" />
     <link rel="icon" href="./images/only_logo.png" />
-    <title>StreamVibe</title></head
-  >.
+    <title>StreamVibe</title>
+  </head>
   <body>
     <div class="container">
-      <!-- Header კონტენტი -->
-
       <header>
-        <a href="./index.html"><img src="./images/Logo.png" alt="logo" /></a>
+        <a class="header_logo" href="./index.html">
+          <img src="./images/Logo.png" alt="logo" />
+        </a>
 
         <div class="nav_div">
           <nav class="navbar">
@@ -36,20 +37,51 @@
         </div>
 
         <div class="zari_div">
-          <a href="./index.html"><img src="./images/lupa.png" alt="lupa" /></a>
-          <a href="./index.html"><img src="./images/zari.png" alt="zari" /></a>
+          <a href="./index.html"
+            ><img src="./images/lupa.png" alt="search"
+          /></a>
+          <a href="./index.html"
+            ><img src="./images/zari.png" alt="notifications"
+          /></a>
         </div>
+
         <button class="burger_button burger">
-          <img src="./images/burger.png" alt="burger" />
+          <img src="./images/burger.png" alt="menu" />
         </button>
         <button class="burger_button x_mark">
-          <img src="./images/burger_x.png" alt="x mark" />
+          <img src="./images/burger_x.png" alt="close" />
         </button>
       </header>
+
+      <div class="menu_overlay"></div>
+      <nav class="mobile_nav">
+        <ul class="mobile_nav_ul">
+          <li class="mobile_nav_li">
+            <a href="index.html" class="mobile_nav_a">Home</a>
+          </li>
+          <li class="mobile_nav_li">
+            <a href="Movies_&_Shows.html" class="mobile_nav_a"
+              >Movies & Shows</a
+            >
+          </li>
+          <li class="mobile_nav_li">
+            <a href="Support.html" class="mobile_nav_a">Support</a>
+          </li>
+        </ul>
+        <div class="mobile_nav_icons">
+          <a href="./index.html">
+            <img src="./images/lupa.png" alt="search" />
+          </a>
+          <a href="./index.html">
+            <img src="./images/zari.png" alt="notifications" />
+          </a>
+        </div>
+      </nav>
+
       <!-- 1 სექცია -->
       <section class="main_sec">
         <div class="main_sec_div1"></div>
-        <img src="./images/Abstract Design.svg" alt="" />
+        <img src="./images/Abstract Design.svg" alt="Abstract Design" />
         <div class="main_sec_div2"></div>
 
         <div class="text_div">
@@ -192,8 +224,8 @@
                   StreamVibe offers a range of plans starting at $9.99 per
                   month.
                 </div>
+                <div class="for_gradient"></div>
               </div>
-              <div class="for_gradient"></div>
               <div class="faq-item">
                 <div class="faq-header">
                   <span>03</span> What content is available on StreamVibe?
@@ -235,8 +267,8 @@
                 <div class="faq-content">
                   We offer a 7-day free trial for new users.
                 </div>
+                <div class="for_gradient"></div>
               </div>
-              <div class="for_gradient"></div>
               <div class="faq-item">
                 <div class="faq-header">
                   <span>07</span> How do I contact StreamVibe customer support?
@@ -275,7 +307,7 @@
                 to sign up for a free trial of StreamVibe.
               </p>
             </div>
-            <a href="./Support.html"><button>Start a Free Trail</button></a>
+            <a href="./Support.html"><button>Start a Free Trial</button></a>
           </div>
         </div>
       </section>
@@ -369,17 +401,17 @@
             <div class="for_social">
               <div class="social_frame">
                 <a href="https://www.facebook.com/" target="_blank"
-                  ><img class="social_icon" src="./images/facebook.svg" alt=""
+                  ><img class="social_icon" src="./images/facebook.svg" alt="Facebook"
                 /></a>
               </div>
               <div class="social_frame">
                 <a href="https://x.com/" target="_blank"
-                  ><img class="social_icon" src="./images/x.svg" alt=""
+                  ><img class="social_icon" src="./images/x.svg" alt="X (Twitter)"
                 /></a>
               </div>
               <div class="social_frame">
                 <a href="https://www.linkedin.com/" target="_blank"
-                  ><img class="social_icon" src="./images/linkedin.svg" alt=""
+                  ><img class="social_icon" src="./images/linkedin.svg" alt="LinkedIn"
                 /></a>
               </div>
             </div>
@@ -417,5 +449,6 @@
     <script src="./js/script.js"></script>
     <script src="./js/cookies.js"></script>
     <script src="./js/scrollUp.js"></script>
+    <script src="./js/burger.js"></script>
   </body>
 </html>
