@@ -344,6 +344,79 @@
   .slider {
     margin-top: 70px;
   }
+
+  /* support page სტილები ტაბლეტისთვის */
+
+  .support_sec1 {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    min-height: 700px;
+    margin-top: 70px;
+    gap: 40px;
+  }
+
+  .support_sec1_left,
+  .support_sec1_right {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .support_sec1_headers {
+    text-align: center;
+    row-gap: 14px;
+    margin-bottom: 30px;
+  }
+
+  .support_sec1_headers h1 {
+    font-size: 34px;
+    margin-bottom: 10px;
+  }
+
+  .support_sec1_headers h3 {
+    font-size: 15px;
+    margin-bottom: 8px;
+  }
+
+  .form-wrapper {
+    padding: 35px;
+    gap: 30px;
+  }
+
+  .row {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .input-group label {
+    font-size: 15px;
+    margin-bottom: 10px;
+  }
+
+  .input-group input,
+  .input-group textarea {
+    padding: 14px;
+    font-size: 13px;
+  }
+
+  .show-password {
+    font-size: 15px;
+    margin-top: 8px;
+  }
+
+  .actions .terms {
+    font-size: 15px;
+  }
+  
+
+  .send-button {
+    padding: 12px 18px;
+    font-size: 13px;
+  }
+
+  .error {
+    font-size: 13px;
+  }
 }
 
 /* შედარებით მცირე ტაბლეტის სტილები 769px-დან */

@@ -1245,7 +1245,6 @@ footer {
   display: flex;
   max-width: 533px;
   width: 100%;
-  min-height: 739px;
   flex-direction: column;
   justify-content: center;
   gap: 50px;

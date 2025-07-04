@@ -293,4 +293,58 @@
     gap: 4px;
     font-size: 12px;
   }
+  /* support page სტილები ლეპტოპის რეზოლუციისთვის */
+
+  .support_sec1 {
+    min-height: 592px;
+    margin-top: 220px;
+    gap: 50px;
+  }
+  .support_sec1_headers {
+    row-gap: 10px;
+  }
+  .support_sec1_headers h1 {
+    font-size: 38px;
+  }
+
+  .support_sec1_headers h3 {
+    font-size: 16px;
+  }
+
+  .form-wrapper {
+    gap: 40px;
+    padding: 40px;
+  }
+
+  .row {
+    gap: 40px;
+  }
+  .input-group label {
+    font-size: 16px;
+    margin-bottom: 12px;
+  }
+
+  .input-group input,
+  .input-group textarea {
+    padding: 16px;
+    gap: 77px;
+    font-size: 14px;
+  }
+
+  .show-password {
+    font-size: 16px;
+    margin-top: 10px;
+  }
+
+  .actions .terms {
+    font-size: 16px;
+  }
+  .send-button {
+    padding: 14px 20px;
+    font-size: 14px;
+  }
+  .error {
+  
+    font-size: 14px;
+  }
 }

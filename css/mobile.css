@@ -309,4 +309,53 @@
   .must_card_img {
     height: 235px;
   }
+
+  /* support page სტილები ტაბლეტისთვის */
+
+  .support_sec1 {
+    min-height: 1326px;
+    margin-top: 40px;
+    gap: 40px;
+  }
+
+  .support_sec1_headers h1 {
+    font-size: 28px;
+  }
+
+  .support_sec1_headers h3 {
+    font-size: 14px;
+  }
+
+  .form-wrapper {
+    padding: 24px;
+    gap: 20px;
+  }
+
+  .input-group label {
+    font-size: 15px;
+    margin-bottom: 10px;
+  }
+
+  .show-password {
+    font-size: 12px;
+    margin-top: 8px;
+  }
+  .actions {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .actions .terms {
+    font-size: 14px;
+  }
+
+  .send-button {
+    width: 100%;
+    padding: 12px 18px;
+    font-size: 13px;
+  }
+
+  .error {
+    font-size: 13px;
+  }
 }
