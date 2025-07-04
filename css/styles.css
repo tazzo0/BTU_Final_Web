@@ -850,6 +850,13 @@ footer {
   margin-top: 30px;
 }
 
+.slider_play_media {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
 .play_media {
   display: flex;
   padding: 14px;
@@ -1110,7 +1117,6 @@ footer {
   flex-direction: column;
   align-items: flex-start;
   gap: 20px;
-  
 }
 
 .new-release-card-header {
@@ -1137,7 +1143,6 @@ footer {
   overflow-x: auto;
   overflow-y: hidden;
   -webkit-overflow-scrolling: touch;
-  /* Prevent unwanted vertical scrollbars */
   scrollbar-width: thin;
   scrollbar-color: #e50000 #1a1a1a;
 }

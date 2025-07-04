@@ -12,7 +12,6 @@
 
   /* მთავარი ტექსტის სექცია  */
   .text_div {
-    
     padding: 0 20px;
   }
 
@@ -107,28 +106,38 @@
 
   /* Section 4*/
   .sec4 {
-    min-height: 220px;
-    margin-bottom: 60px;
+    background-image: url("../images/BackgroundImages_phone.png");
+    min-height: 345px;
+    padding: 50px 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
   .sec4_div {
-    min-height: 220px;
-    padding-inline: 20px;
+    min-height: 145px;
+    max-width: 298px;
+    width: 100%;
+    padding: 20px;
   }
-
+  .sec4_header {
+    text-align: center;
+  }
   .sec4_header h2 {
     font-size: 24px;
-    margin-bottom: 12px;
+    margin-bottom: 10px;
   }
 
   .sec4_header p {
     font-size: 14px;
-    margin-bottom: 20px;
   }
-
+  .sec4_headers_button {
+    flex-direction: column;
+    gap: 50px;
+  }
   .sec4_headers_button button {
-    padding: 8px 14px;
-    font-size: 10px;
+    padding: 14px 20px;
+    font-size: 14px;
   }
 
   /* Footer - */
@@ -227,5 +236,77 @@
   .mobile_nav_icons img {
     width: 16px;
     height: 16px;
+  }
+
+  /* Movies & Shows გვერდის უნიკალური სექციების სტილები ტაბლეტის რეზოლუციისთვის */
+
+  /* მთავარი სლაიდერი */
+  .slider {
+    min-height: 468px;
+    margin: 40px auto 80px;
+  }
+  .slide-content h2 {
+    font-size: 24px;
+  }
+  .slide-content p {
+    display: none !important; /* ტექსტის დამალვა მობილურზე */
+  }
+  .buttons {
+    margin-top: 20px;
+    flex-direction: column;
+  }
+  .play_media {
+    gap: 6px;
+    padding: 9px;
+  }
+  .play {
+    width: 100%;
+    font-size: 12px;
+    padding: 14px 20px;
+  }
+  .slider_play_media {
+    gap: 8px;
+  }
+
+  .arrow {
+    width: 40px;
+    height: 40px;
+    padding: 10px;
+  }
+
+  /* სექცია 2 სტილები */
+  .sec22 {
+    padding: 20px;
+    gap: 50px;
+  }
+
+  .genre-slider-section {
+    gap: 20px;
+  }
+
+  .genre-slider-header h2 {
+    font-size: 22px;
+  }
+
+  .genre-slider-card {
+    width: 180px;
+    min-width: 180px;
+    height: 200px;
+    padding: 20px;
+    flex-shrink: 0;
+  }
+
+  .genre-slider-card img {
+    height: 140px;
+    width: 100%;
+  }
+
+  /* must watch სექციის სტილები */
+  .slider-card_must {
+    width: 231px;
+    height: 303px;
+  }
+  .must_card_img {
+    height: 235px;
   }
 }

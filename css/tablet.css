@@ -338,6 +338,12 @@
     font-size: 20px;
     border-radius: 12px;
   }
+  /* Movies & Shows გვერდის უნიკალური სექციების სტილები ტაბლეტის რეზოლუციისთვის */
+
+  /* მთავარი სლაიდერი */
+  .slider {
+    margin-top: 70px;
+  }
 }
 
 /* შედარებით მცირე ტაბლეტის სტილები 769px-დან */
@@ -606,5 +612,139 @@
   .mobile_nav_icons img {
     width: 18px;
     height: 18px;
+  }
+
+  /* Movies & Shows გვერდის უნიკალური სექციების სტილები ტაბლეტის რეზოლუციისთვის */
+
+  /* მთავარი სლაიდერი */
+  .slider {
+    min-height: 500px;
+    margin: 60px auto 80px;
+  }
+  .slide-content h2 {
+    font-size: 24px;
+  }
+  .slide-content p {
+    font-size: 14px;
+  }
+  .buttons {
+    margin-top: 20px;
+  }
+  .play_media {
+    gap: 6px;
+    padding: 9px;
+  }
+  .play {
+    font-size: 12px;
+  }
+
+  .arrow {
+    width: 40px;
+    height: 40px;
+    padding: 10px;
+  }
+
+  /* სექცია 2 სტილები */
+  .sec22 {
+    padding: 25px 25px 25px 25px; /* მარჯვენა padding შემცირებული */
+    gap: 60px;
+  }
+
+  .section-label {
+    font-size: 14px;
+    padding: 6px 16px;
+  }
+
+  .genre-slider-section {
+    gap: 30px;
+  }
+
+  .genre-slider-header h2 {
+    font-size: 22px;
+  }
+
+  /* ისრების დამალვა და მობილური ნავიგაცია */
+  .genre-slider-nav-box {
+    display: none !important;
+  }
+
+  /* სლაიდერის კონტეინერი */
+  .genre-slider-container {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .genre-slider-track {
+    gap: 16px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    display: flex;
+    flex-wrap: nowrap;
+    padding-right: 25px; /* ბოლო ელემენტისთვის space */
+  }
+
+  .genre-slider-track::-webkit-scrollbar {
+    display: none;
+  }
+
+  .genre-slider-card {
+    width: 200px;
+    min-width: 200px;
+    height: 230px;
+    padding: 20px;
+    flex-shrink: 0;
+  }
+
+  .genre-slider-card img {
+    height: 160px;
+    width: 100%;
+    object-fit: cover;
+  }
+
+  .genre-slider-title {
+    font-size: 14px;
+  }
+
+  /* New_Releases სექცია სტილები */
+  .new-release-card {
+    padding: 14px;
+    gap: 14px;
+    flex-shrink: 0;
+    min-width: 200px;
+  }
+
+  .new-release-card-header {
+    font-size: 11px;
+  }
+
+  /* must watch სექციის სტილები */
+  .slider-card_must {
+    width: 240px;
+    height: 340px;
+    padding: 12px;
+    gap: 12px;
+    flex-shrink: 0;
+  }
+  .must_card_img {
+    height: 270px;
+  }
+  .movie-length {
+    font-size: 10px;
+    gap: 1px;
+  }
+  .movie-length img {
+    width: 14px;
+    height: 14px;
+  }
+  .movie-rate {
+    gap: 4px;
+    font-size: 10px;
+  }
+  .movie-rate img {
+    width: 70px;
+    height: 15px;
   }
 }

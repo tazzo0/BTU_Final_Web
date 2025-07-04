@@ -278,19 +278,19 @@
     padding: 16px;
     gap: 16px;
   }
-.must_card_img {
-  height: 324px;
-}
-.movie-length{
-  font-size: 12px;
-  gap: 2px;
-}
-.movie-length img {
-  width: 20px;
-  height: 20px;
-}
-.movie-rate{
-  gap: 4px; 
-   font-size: 12px;
-}
+  .must_card_img {
+    height: 324px;
+  }
+  .movie-length {
+    font-size: 12px;
+    gap: 2px;
+  }
+  .movie-length img {
+    width: 20px;
+    height: 20px;
+  }
+  .movie-rate {
+    gap: 4px;
+    font-size: 12px;
+  }
 }
